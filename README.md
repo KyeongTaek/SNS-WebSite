@@ -31,13 +31,9 @@
  - Spring
 
 ## 컨벤션    
-commit, naming, css, page convention : https://github.com/CBNU-2022-Winter-1Team/SNS-WebSite.wiki.git    
+ - [컨벤션 설정](https://github.com/CBNU-2022-Winter-1Team/SNS-WebSite/wiki/convention) : commit, naming, css, page convention      
 
 ## 팀원
 정원재, 최성운, 조희진, 임경택    
 
-## 참조 문헌
 
-git 컨벤션    
-
-https://github.com/knut-cs/Curriculum
