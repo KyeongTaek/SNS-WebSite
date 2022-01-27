@@ -53,6 +53,10 @@ ex) Create : Login.jsp (#1234)
  - PascalCase : file name, Class, function, JavaScript function, custom hook    
  - Snake_Case : 데이터베이스     
  - 모두 대문자로 표시 : global 변수
+ - use___ : Hook API
+ - ___Context : Context API
+ - ___Reducer : 리듀서
+ - handle___ : 이벤트 헨들러
 
 ## css 컨벤션    
 모든 styled 변수는 해당 컴포넌트 파일에 정의하는 것을 권장    
@@ -62,9 +66,6 @@ ex) Create : Login.jsp (#1234)
 pages 폴더에 포함된 페이지 컴포넌트 이름은 ____Page 로 지정    
 ex) LoginPage, HomePage, 
 
-## 이벤트 핸들러
-handle______    
-ex) handleChangeSearch    
     
 ## 팀원
 정원재, 최성운, 조희진, 임경택    
