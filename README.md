@@ -1,4 +1,4 @@
-# SNS-WebSite-1Team
+# SNS-WebSite
 
 특색 있는 익명성을 보장하는 sns 웹사이트
 <br>
