@@ -30,43 +30,9 @@
  - React    
  - Spring
 
-## commit 컨벤션    
- - Update :     
-기능이나 파일의 내용을 변경했을 때
+## 컨벤션    
+commit, naming, css, page convention : https://github.com/CBNU-2022-Winter-1Team/SNS-WebSite.wiki.git    
 
- - Delete :     
-기능이나 파일을 삭제 했을 때    
-
- - Fix :    
-경고표시나 에러를 수정했을 때
-
- - Add :     
-기능을 추가했을 때
-
- - Create :      
-새로운 파일을  만들 때    
-
-ex) Create : Login.jsp (#1234)      
-    
-## 네이밍 컨벤션    
- - lowerCamelCase : variable, method    
- - PascalCase : file name, Class, function, JavaScript function, custom hook    
- - Snake_Case : 데이터베이스     
- - 모두 대문자로 표시 : global 변수
- - use___ : Hook API
- - ___Context : Context API
- - ___Reducer : 리듀서
- - handle___ : 이벤트 헨들러
-
-## css 컨벤션    
-모든 styled 변수는 해당 컴포넌트 파일에 정의하는 것을 권장    
-공유 css는 (미정) 파일에 정의한다.    
-
-## 페이지 컨벤션
-pages 폴더에 포함된 페이지 컴포넌트 이름은 ____Page 로 지정    
-ex) LoginPage, HomePage, 
-
-    
 ## 팀원
 정원재, 최성운, 조희진, 임경택    
 
