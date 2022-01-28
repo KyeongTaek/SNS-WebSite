@@ -12,7 +12,7 @@ import NotificationPage from './pages/NotificationPage'
 import PwModifyPage from './pages/PwModifyPage'
 import IdSearchPage from './pages/IdSearchPage'
 import PwSearchPage from './pages/PwSearchPage'
-import './Common.css';
+import './common.css';
 
 import { BrowserRouter as Router, Route, NavLink, Routes } from 'react-router-dom'
 
