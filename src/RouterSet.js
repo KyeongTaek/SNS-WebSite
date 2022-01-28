@@ -1,8 +1,7 @@
 import BoardModifyPage from './pages/BoardModifyPage'
 import BoardWritePage from './pages/BoardWritePage'
 import ChatPage from './pages/ChatPage'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
+
 import JoinPage from './pages/JoinPage'
 import LoginPage from './pages/LoginPage'
 import MainPage from './pages/MainPage'
@@ -16,22 +15,16 @@ import PwSearchPage from './pages/PwSearchPage'
 import ReportPage from './pages/ReportPage'
 import './style/common.css';
 
-import React, { useState } from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import Frame from './components/Frame'
 
 function RouterSet() {
-    const [location, setLocation] = useState("");
-    console.log("11"+location);
-    // const getLocation = (location) =>{
-    //     setLocation(location);
-    // }
   return (
       
     <div className="RouterSet">
 
     <Router>
-        <Navigation location = {location} setLocation = {setLocation}/>
-        <Footer />
+        <Frame />
         
         <Routes>
             

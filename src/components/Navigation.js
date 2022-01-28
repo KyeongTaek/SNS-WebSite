@@ -1,12 +1,10 @@
-import { NavLink , useLocation} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
-function Navigation(location, setLocation) {
-  location = useLocation();
-  
-  console.log(location.pathname)
+function Navigation() {
+
     return (
       <div className="Navigation">
-
+        
           <nav>
             <ul>
              
