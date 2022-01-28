@@ -4,7 +4,9 @@
 <br>
 
 ## 사용 가이드
-npm install : package.json 파일의 의존성을 설치하는 동작
+npm install : package.json 파일의 의존성을 설치하는 동작    
+npm start : react 실행 시키기
+
 
 
 ## 기능
@@ -31,7 +33,7 @@ npm install : package.json 파일의 의존성을 설치하는 동작
  - chatting    
 
 ## Tech    
-[<img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white" />](https://spring.io/) &nbsp;&nbsp;[<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />](https://ko.reactjs.org/) &nbsp;&nbsp;[<img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white" />](https://www.mysql.com/) &nbsp;&nbsp; [<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"/>](https://nodejs.org/ko/)
+[<img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white" />](https://spring.io/) &nbsp;&nbsp;[<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />](https://ko.reactjs.org/) &nbsp;&nbsp;[<img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white" />](https://www.mysql.com/) &nbsp;&nbsp; [<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"/>](https://nodejs.org/ko/) &nbsp;&nbsp; [<img src = "https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white"/>](https://getbootstrap.com/)
 
 
 ## 컨벤션    
