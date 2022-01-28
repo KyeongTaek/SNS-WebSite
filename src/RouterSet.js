@@ -1,7 +1,8 @@
 import BoardModifyPage from './pages/BoardModifyPage'
 import BoardWritePage from './pages/BoardWritePage'
 import ChatPage from './pages/ChatPage'
-import FramePage from './pages/FramePage'
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
 import JoinPage from './pages/JoinPage'
 import LoginPage from './pages/LoginPage'
 import MainPage from './pages/MainPage'
@@ -14,58 +15,20 @@ import IdSearchPage from './pages/IdSearchPage'
 import PwSearchPage from './pages/PwSearchPage'
 import './common.css';
 
-import { BrowserRouter as Router, Route, NavLink, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 function RouterSet() {
+
   return (
+      
     <div className="RouterSet">
 
-      <FramePage />
+    
+    {window.location.pathname}
     
       <Router>
-      <nav>
-        <ul>
-            <li>
-                <NavLink to="/">FramePage</NavLink>
-            </li>
-            <li>
-                <NavLink to="/boardModify">BoardModifyPage</NavLink>
-            </li>
-            <li>
-                <NavLink to="/boardWrite">BoardWritePage</NavLink>
-            </li>
-            <li>
-                <NavLink to="/chat">ChatPage</NavLink>
-            </li>
-            <li>
-                <NavLink to="/join">JoinPage</NavLink>
-            </li>
-            <li>
-                <NavLink to="/login">LoginPage</NavLink>
-            </li>
-            <li>
-                <NavLink to="/management">ManagementPage</NavLink>
-            </li>
-            <li>
-                <NavLink to="/my">MyPage</NavLink>
-            </li>
-            <li>
-                <NavLink to="/myConfig">MyConfigPage</NavLink>
-            </li>
-            <li>
-                <NavLink to="/notification">NotificationPage</NavLink>
-            </li>
-            <li>
-                <NavLink to="/pwModify">PwModifyPage</NavLink>
-            </li>
-            <li>
-                <NavLink to="/idSearch">IdSearchPage</NavLink>
-            </li>
-            <li>
-                <NavLink to="/pwSearch">PwSearchPage</NavLink>
-            </li>
-          </ul>
-        </nav>
+        <Footer />
+        <Navigation />
         <Routes>
           <Route path="/boardModify" element={<BoardModifyPage />}/>
           <Route path="/boardWrite" element={<BoardWritePage />}/>
@@ -79,8 +42,7 @@ function RouterSet() {
           <Route path="/pwModify" element={<PwModifyPage />}/>
           <Route path="/idSearch" element={<IdSearchPage />}/>
           <Route path="/pwSearch" element={<PwSearchPage />}/>
-          <Route path="/main" element={<MainPage />}/>
-          <Route exact path="/" element={<FramePage />}/>
+          <Route path="/" element={<MainPage />}/>
         
         </Routes>
       </Router>
