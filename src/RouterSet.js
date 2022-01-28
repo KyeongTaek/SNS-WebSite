@@ -1,8 +1,7 @@
 import BoardModifyPage from './pages/BoardModifyPage'
 import BoardWritePage from './pages/BoardWritePage'
 import ChatPage from './pages/ChatPage'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
+
 import JoinPage from './pages/JoinPage'
 import LoginPage from './pages/LoginPage'
 import MainPage from './pages/MainPage'
@@ -16,21 +15,19 @@ import PwSearchPage from './pages/PwSearchPage'
 import ReportPage from './pages/ReportPage'
 import './style/common.css';
 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import Frame from './components/Frame'
 
 function RouterSet() {
-
   return (
       
     <div className="RouterSet">
 
-    
-    {window.location.pathname}
-    
-      <Router>
-        <Footer />
-        <Navigation />
+    <Router>
+        <Frame />
+        
         <Routes>
+            
           <Route path="/boardModify" element={<BoardModifyPage />}/>
           <Route path="/boardWrite" element={<BoardWritePage />}/>
           <Route path="/chat" element={<ChatPage />}/>
@@ -43,7 +40,7 @@ function RouterSet() {
           <Route path="/pwModify" element={<PwModifyPage />}/>
           <Route path="/idSearch" element={<IdSearchPage />}/>
           <Route path="/pwSearch" element={<PwSearchPage />}/>
-          <Route path="/ReportPage" element={<ReportPage />}/>
+          <Route path="/Report" element={<ReportPage />}/>
           <Route path="/" element={<MainPage />}/>
         
         </Routes>
