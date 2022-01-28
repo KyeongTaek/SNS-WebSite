@@ -4,7 +4,9 @@
 <br>
 
 ## 사용 가이드
-npm install : package.json 파일의 의존성을 설치하는 동작
+npm install : package.json 파일의 의존성을 설치하는 동작    
+npm start : react 실행 시키기
+
 
 
 ## 기능
