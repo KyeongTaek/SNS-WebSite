@@ -13,7 +13,8 @@ import NotificationPage from './pages/NotificationPage'
 import PwModifyPage from './pages/PwModifyPage'
 import IdSearchPage from './pages/IdSearchPage'
 import PwSearchPage from './pages/PwSearchPage'
-import './common.css';
+import ReportPage from './pages/ReportPage'
+import './style/common.css';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
@@ -42,6 +43,7 @@ function RouterSet() {
           <Route path="/pwModify" element={<PwModifyPage />}/>
           <Route path="/idSearch" element={<IdSearchPage />}/>
           <Route path="/pwSearch" element={<PwSearchPage />}/>
+          <Route path="/ReportPage" element={<ReportPage />}/>
           <Route path="/" element={<MainPage />}/>
         
         </Routes>

@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 function Navigation() {
     return (
       <div className="Navigation">
-          {/* <h1>FramePage입니다.</h1> */}
+
           <nav>
             <ul>
              
@@ -42,6 +42,9 @@ function Navigation() {
               </li>
               <li>
                   <NavLink to="/pwSearch">PwSearchPage</NavLink>
+              </li>
+              <li>
+                  <NavLink to="/report">ReportPage</NavLink>
               </li>
             </ul>
         </nav>
