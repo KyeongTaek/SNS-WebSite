@@ -1,6 +1,9 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink , useLocation} from 'react-router-dom'
 
-function Navigation() {
+function Navigation(location, setLocation) {
+  location = useLocation();
+  
+  console.log(location.pathname)
     return (
       <div className="Navigation">
 

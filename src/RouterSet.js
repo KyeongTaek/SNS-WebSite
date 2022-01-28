@@ -16,21 +16,25 @@ import PwSearchPage from './pages/PwSearchPage'
 import ReportPage from './pages/ReportPage'
 import './style/common.css';
 
+import React, { useState } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 function RouterSet() {
-
+    const [location, setLocation] = useState("");
+    console.log("11"+location);
+    // const getLocation = (location) =>{
+    //     setLocation(location);
+    // }
   return (
       
     <div className="RouterSet">
 
-    
-    {window.location.pathname}
-    
-      <Router>
+    <Router>
+        <Navigation location = {location} setLocation = {setLocation}/>
         <Footer />
-        <Navigation />
+        
         <Routes>
+            
           <Route path="/boardModify" element={<BoardModifyPage />}/>
           <Route path="/boardWrite" element={<BoardWritePage />}/>
           <Route path="/chat" element={<ChatPage />}/>
@@ -43,7 +47,7 @@ function RouterSet() {
           <Route path="/pwModify" element={<PwModifyPage />}/>
           <Route path="/idSearch" element={<IdSearchPage />}/>
           <Route path="/pwSearch" element={<PwSearchPage />}/>
-          <Route path="/ReportPage" element={<ReportPage />}/>
+          <Route path="/Report" element={<ReportPage />}/>
           <Route path="/" element={<MainPage />}/>
         
         </Routes>
