@@ -1,10 +1,7 @@
-import Login from './LoginPage.js'
-
-
 function MainPage() {
   return (
     <div className="MainPage">
-      <Login />
+      <h1>MainPage입니다.</h1>
     </div>
   );
 }
