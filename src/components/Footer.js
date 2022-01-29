@@ -4,7 +4,6 @@ function Footer() {
           <footer>
             <h1>Footer입니다.</h1>
           </footer>
-
       </div>
     );
   }
