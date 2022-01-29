@@ -18,6 +18,10 @@ import './style/common.css';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import Frame from './components/Frame'
 
+import '@fortawesome/fontawesome-free/css/all.min.css'; 
+import'bootstrap-css-only/css/bootstrap.min.css'; 
+import'mdbreact/dist/css/mdb.css';
+
 function RouterSet() {
   return (
       
