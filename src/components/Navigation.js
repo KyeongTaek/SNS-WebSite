@@ -26,12 +26,9 @@ function Navigation() {
                 <div className="col-lg-4 navRight">
                     <div className='icon'>
                         <i className="far fa-bell fa-2x"></i>
-                        
-                        <i className="fas fa-film fa-2x"></i>
-
-                        <i className="fas fa-file-medical fa-2x"></i>
-
                         <i className="far fa-comment-dots fa-2x"></i>
+                        <i className="fas fa-file-medical fa-2x"></i>
+                        <i className="fas fa-film fa-2x"></i>
                     </div>
                 
                     <div className='user'>
