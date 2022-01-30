@@ -41,8 +41,8 @@ function MainPage() {
               <p className="card-text">
                 Some quick example text to build on the card title and make up the bulk of the card's content.
                 <br/>
-                <i class="fas fa-heart"></i> 123 &nbsp;&nbsp;&nbsp;
-                <i class="fas fa-comment-alt"></i> 456
+                <i className="fas fa-heart"></i> 123 &nbsp;&nbsp;&nbsp;
+                <i className="fas fa-comment-alt"></i> 456
               </p>
             </div>
            </div>
@@ -60,8 +60,8 @@ function MainPage() {
               <p className="card-text">
                 Some quick example text to build on the card title and make up the bulk of the card's content.
                 <br/>
-                <i class="fas fa-heart"></i> 123 &nbsp;&nbsp;&nbsp;
-                <i class="fas fa-comment-alt"></i> 456
+                <i className="fas fa-heart"></i> 123 &nbsp;&nbsp;&nbsp;
+                <i className="fas fa-comment-alt"></i> 456
               </p>            </div>
            </div>
           </div>
@@ -78,8 +78,9 @@ function MainPage() {
               <p className="card-text">
                 Some quick example text to build on the card title and make up the bulk of the card's content.
                 <br/>
-                <i class="fas fa-heart"></i> 123 &nbsp;&nbsp;&nbsp;
-                <i class="fas fa-comment-alt"></i> 456
+                <i className="fas fa-heart"></i> 123 &nbsp;&nbsp;&nbsp;
+                <i className="fas fa-comment-alt"></i> 456
+
               </p>            </div>
            </div>
           </div>
@@ -96,8 +97,9 @@ function MainPage() {
               <p className="card-text">
                 Some quick example text to build on the card title and make up the bulk of the card's content.
                 <br/>
-                <i class="fas fa-heart"></i> 123 &nbsp;&nbsp;&nbsp;
-                <i class="fas fa-comment-alt"></i> 456
+                <i className="fas fa-heart"></i> 123 &nbsp;&nbsp;&nbsp;
+                <i className="fas fa-comment-alt"></i> 456
+
               </p>            </div>
            </div>
           </div>
@@ -124,7 +126,8 @@ function MainPage() {
           </div>
           <h5 className='chatText'>adsf</h5>
           <p className='chatText2'>asds</p>
-          <i class="far fa-envelope fa-2x"></i>
+          <i className="far fa-envelope fa-2x"></i>
+
         </div><br/>
         <div className='chatFrame'>
           <div className='circleBox'>
@@ -133,7 +136,8 @@ function MainPage() {
           </div>
           <h5 className='chatText'>adsf</h5>
           <p className='chatText2'>asds</p>
-          <i class="far fa-envelope fa-2x"></i>
+          <i className="far fa-envelope fa-2x"></i>
+
         </div><br/>
         <div className='chatFrame'>
           <div className='circleBox'>
@@ -142,7 +146,9 @@ function MainPage() {
           </div>
           <h5 className='chatText'>adsf</h5>
           <p className='chatText2'>asds</p>
-          <i class="far fa-envelope fa-2x"></i>
+
+          <i className="far fa-envelope fa-2x"></i>
+
         </div><br/>
 
 
