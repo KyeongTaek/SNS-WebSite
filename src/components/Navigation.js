@@ -50,7 +50,7 @@ function Navigation() {
  
 
               <br/>
-            {/* <ul>
+            <ul>
              
               <li>
                   <NavLink to="/boardModify">BoardModifyPage</NavLink>
@@ -91,7 +91,7 @@ function Navigation() {
               <li>
                   <NavLink to="/report">ReportPage</NavLink>
               </li>
-            </ul> */}
+            </ul>
         </nav>
       </div>
     );
