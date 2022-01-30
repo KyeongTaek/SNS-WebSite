@@ -66,10 +66,11 @@ nav .row div{
 
 .icon{
     width: 45%;
+    height: 45px;
 }
 
 .icon i{
-    padding-top: 1%;
+    margin-top: 10px;
     float: right;
     margin-left: 10%;
     color: white;
