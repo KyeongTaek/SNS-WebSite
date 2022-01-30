@@ -1,5 +1,6 @@
 .row {
   width: 100%;
+  height: 40px;
 }
 
 nav div .logo{
@@ -8,11 +9,12 @@ nav div .logo{
 }
 nav div .logo p {
     margin: 0;
-    margin-top: 10%;
+    margin-top: 15%;
 }
 
 .search{
     position: relative;
+    
 }
 
 #searchContent{
@@ -26,6 +28,7 @@ nav div .logo p {
 .searchFrame{
     position: relative;
     margin-left: 15%;
+    margin-top: 3px;
     width: 70%;
 }
 
