@@ -80,6 +80,7 @@ function MainPage() {
                 <br/>
                 <i className="fas fa-heart"></i> 123 &nbsp;&nbsp;&nbsp;
                 <i className="fas fa-comment-alt"></i> 456
+
               </p>            </div>
            </div>
           </div>
@@ -98,6 +99,7 @@ function MainPage() {
                 <br/>
                 <i className="fas fa-heart"></i> 123 &nbsp;&nbsp;&nbsp;
                 <i className="fas fa-comment-alt"></i> 456
+
               </p>            </div>
            </div>
           </div>
@@ -125,6 +127,7 @@ function MainPage() {
           <h5 className='chatText'>adsf</h5>
           <p className='chatText2'>asds</p>
           <i className="far fa-envelope fa-2x"></i>
+
         </div><br/>
         <div className='chatFrame'>
           <div className='circleBox'>
@@ -134,6 +137,7 @@ function MainPage() {
           <h5 className='chatText'>adsf</h5>
           <p className='chatText2'>asds</p>
           <i className="far fa-envelope fa-2x"></i>
+
         </div><br/>
         <div className='chatFrame'>
           <div className='circleBox'>
@@ -142,7 +146,9 @@ function MainPage() {
           </div>
           <h5 className='chatText'>adsf</h5>
           <p className='chatText2'>asds</p>
+
           <i className="far fa-envelope fa-2x"></i>
+
         </div><br/>
 
 
