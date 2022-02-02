@@ -1,7 +1,6 @@
 import BoardModifyPage from './pages/BoardModifyPage'
 import BoardWritePage from './pages/BoardWritePage'
 import ChatPage from './pages/ChatPage'
-
 import JoinPage from './pages/JoinPage'
 import LoginPage from './pages/LoginPage'
 import MainPage from './pages/MainPage'
@@ -15,18 +14,31 @@ import PwSearchPage from './pages/PwSearchPage'
 import ReportPage from './pages/ReportPage'
 import './style/common.css';
 
+import { useEffect } from 'react'
+import {useDispatch } from "react-redux";
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import Frame from './components/Frame'
+import { useMediaQuery } from 'react-responsive'
+
 
 import '@fortawesome/fontawesome-free/css/all.min.css'; 
 import'bootstrap-css-only/css/bootstrap.min.css'; 
 import'mdbreact/dist/css/mdb.css';
 
 function RouterSet() {
+  
+  const dispatch = useDispatch()
+  const isDesktop = useMediaQuery({query: '(min-width: 1100px)' })
+
+  useEffect(()=>{
+    dispatch({ type : 'resize', isDesktop:isDesktop})
+  }, [dispatch, isDesktop])
+
+
   return (
-      
     <div className="RouterSet">
 
+    
     <Router>
         <Frame />
         
