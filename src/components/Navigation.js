@@ -24,6 +24,7 @@ function Navigation() {
 
                 <div className="col-lg-4 navRight">
                     <div className='icon'>
+
                         <NavLink to="/notification"> 
                             <i className="far fa-bell fa-2x"></i>
                         </NavLink>
