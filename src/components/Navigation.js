@@ -1,8 +1,7 @@
-import { NavLink } from 'react-router-dom'
-import '../style/frame.css';
+import {NavLink } from 'react-router-dom'
+import '../style/navigation.css';
 
 function Navigation() {
-
     return (
       <div className="Navigation">
         
@@ -25,10 +24,20 @@ function Navigation() {
 
                 <div className="col-lg-4 navRight">
                     <div className='icon'>
-                        <i className="far fa-bell fa-2x"></i>
-                        <i className="far fa-comment-dots fa-2x"></i>
-                        <i className="fas fa-file-medical fa-2x"></i>
-                        <i className="fas fa-film fa-2x"></i>
+                        <NavLink to="/notification"> 
+                            <i className="far fa-bell fa-2x"></i>
+                        </NavLink>
+                        <NavLink to="/chat">
+                            <i className="far fa-comment-dots fa-2x"></i>
+                        </NavLink>
+                      
+
+                        <NavLink to="/boardWrite">
+                            <i className="fas fa-file-medical fa-2x"></i>
+                        </NavLink>
+                        <NavLink to="/boardWrite">
+                         <i className="fas fa-film fa-2x"></i>
+                        </NavLink>
                     </div>
                 
                     <div className='user'>
