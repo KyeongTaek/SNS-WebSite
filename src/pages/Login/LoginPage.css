@@ -1,0 +1,139 @@
+@font-face {
+    src: url("../../style/fonts/EliceDigitalBaeum_Regular.ttf");
+    font-family: "EliceDigitalBaeum";
+}
+@font-face {
+    src: url("../../style/fonts/Pretendard-Regular.ttf");
+    font-family: "Pretendard";
+    font-weight: normal;
+}
+@font-face {
+    src: url("../../style/fonts/Pretendard-Bold.ttf");
+    font-family: "Pretendard";
+    font-weight: bold;
+}
+
+.views {
+    font-family: Pretendard;
+    font-weight: normal;
+    font-size: 18px;
+    color: #000000;
+}
+
+.input {
+    font-family: Pretendard;
+    font-weight: normal;
+    font-size: 16px;
+    color: #000000BC;
+}
+
+.find {
+    font-family: Pretendard;
+    font-weight: normal;
+    font-size: 14px;
+    color: #000000;
+}
+
+h2.identification {
+    font-family: Pretendard;
+    font-weight: normal;
+    font-size: 12px;
+    color: #00000099;
+}
+
+.submit {
+    font-family: Pretendard;
+    font-weight: bold;
+    font-size: 12px;
+    color: #FFFFFF;
+    background-color: rgba(198, 180, 236, 1);
+    padding: 10px 50px 10px 50px;
+    width: 50%;
+}
+
+input[type=submit] {
+    width: 30%;
+    background-color: #C6B4EC;
+    color: white;
+    padding: 14px 20px;
+    margin: 20px 100px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=text] {
+    width: 538px;
+    height: 61px;
+    border: 1px solid #0000001F;
+    border-radius: 4px;
+    font-family: Pretendard;
+    font-weight: normal;
+    font-size: 16px;
+
+}
+
+input[type=password] {
+    width: 538px;
+    height: 56px;
+    border: 1px solid #0000001F;
+    border-radius: 4px;
+    font-family: Pretendard;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+div.fixed {
+    position: fixed;
+    margin: 3px 2px;
+    display: block;
+}
+
+.loginFrame form{
+    padding-left: 30%;
+}
+
+.loginFrame h1 {
+    padding-left: 30%;
+    font-family: EliceDigitalBaeum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: #000000;
+}
+
+.loginFrame {
+    padding-top: 10%;
+}
+
+.button {
+    background-color: #E8E7F2;
+    border: none;
+    color: white;
+    width: 408px;
+    height: 272px;
+    margin: 0px 2px;
+    cursor: pointer;
+    display: block;
+}
+
+li {
+    display: inline;
+    padding-left: 3.5%;
+}
+
+a.loginpage {
+    font-family: Pretendard;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+a.loginpage:link {
+    color: black;
+    text-decoration: none;
+}
+
+a.loginpage:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
