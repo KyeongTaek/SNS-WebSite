@@ -12,7 +12,8 @@ function Frame() {
           {/* { location.pathname !== "/login" && location.pathname !=="/join" ?
           <div> <Footer /> <Navigation /> </div>: <div></div> } */}
 
-            <Footer /> <Navigation />
+        <Footer />
+        <Navigation />
       </div>
     );
   }
