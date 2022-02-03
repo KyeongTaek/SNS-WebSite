@@ -13,11 +13,13 @@ import IdSearchPage from './pages/IdSearchPage'
 import PwSearchPage from './pages/PwSearchPage'
 import ReportPage from './pages/ReportPage'
 import './style/common.css';
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
 
 import { useEffect } from 'react'
 import {useDispatch } from "react-redux";
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
-import Frame from './components/Frame'
+
 import { useMediaQuery } from 'react-responsive'
 
 
@@ -50,9 +52,9 @@ function RouterSet() {
   return (
     <div className="RouterSet">
 
-    
+    <div className="wrapper">
     <Router>
-        <Frame />
+        <Navigation />
         
         <Routes>
             
@@ -72,7 +74,13 @@ function RouterSet() {
           <Route path="/" element={<MainPage />}/>
         
         </Routes>
+
+
       </Router>
+      </div>
+
+      <Footer />
+
     </div>
   );
 }

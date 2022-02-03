@@ -1,4 +1,4 @@
-import '../style/main.css';
+import '../style/Main.css';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from 'swiper';
 
@@ -10,13 +10,12 @@ import 'swiper/css/navigation';
 function MainPage() {
   return (
     <div className="MainPage">
-      <div className="row">
-        <div className="col-lg-3 mainLeft">
+        <div className="mainLeft">
         <img src="img/advertisement1.jpg" alt="광고 이미지"/>
           <br/>
           <img src="img/advertisement2.jpg" alt="광고 이미지"/>
         </div>
-        <div className="col-lg-6 mainMid">
+        <div className="mainMid">
           <h5>인기 게시물</h5>
         <Swiper
         slidesPerView={2}
@@ -110,12 +109,14 @@ function MainPage() {
         
         
       </Swiper>
-          
-        </div>
-        <div className='col-lg-1'>
+          <div className='board'>
+            게시글
+          </div>
+
 
         </div>
-        <div className="col-lg-2 mainRight">
+
+        <div className="mainRight">
           <h5>연락처</h5>
 
 
@@ -155,7 +156,6 @@ function MainPage() {
           
         </div>
       </div>
-    </div>
   );
 }
 

@@ -1,4 +1,4 @@
-import '../style/management.css';
+import '../style/Management.css';
 import { useState } from 'react'
 
 function ManagementPage() {
@@ -30,8 +30,7 @@ function ManagementPage() {
     return (
       <div className="ManagementPage">
 
-        <div className="row">
-          <div className="col-lg-2">
+          <div className="sideBarFrame">
             <div className="download">
               <p>
                 관리자 메뉴얼 다운로드
@@ -47,7 +46,7 @@ function ManagementPage() {
               </div>
             </div>
 
-            <div className="col-lg-10 manageBody">
+            <div className="manageBody">
               <h2>신고 멤버</h2>
                 <select id="large" name="large">
                   <option value="volvo">Volvo</option>
@@ -120,7 +119,6 @@ function ManagementPage() {
               </table>
             </div>
           </div>
-      </div>
     );
   }
   

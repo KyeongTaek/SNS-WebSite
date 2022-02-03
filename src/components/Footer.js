@@ -1,9 +1,12 @@
+import '../style/Footer.css'
+
 function Footer() {
     return (
-      <div className="Footer">
-          <footer>
-            <h1>Footer입니다.</h1>
-          </footer>
+      <div className="container-fluid navbar-fixed-bottom">
+        <footer>
+          <h1>Footer입니다.</h1>
+        </footer>
+
       </div>
     );
   }
