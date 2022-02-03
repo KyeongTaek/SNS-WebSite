@@ -1,4 +1,4 @@
-import "../style/Board.css";
+import "./Board.css";
 import {
   Dropdown,
   InputGroup,
@@ -7,13 +7,12 @@ import {
   Form,
   FloatingLabel,
 } from "react-bootstrap";
-
-function BoardModifyPage() {
+function BoardWritePage() {
   return (
-    <div className="BoardModifyPage">
+    <div className="BoardWritePage">
       <div className="row">
         <div className="col-md-9">
-          <h1>게시글 수정</h1>
+          <h1>게시글 작성</h1>
         </div>
         <div className="col-md-3">
           <button className="boardButton">꾸미기 설정</button>
@@ -63,4 +62,4 @@ function BoardModifyPage() {
   );
 }
 
-export default BoardModifyPage;
+export default BoardWritePage;

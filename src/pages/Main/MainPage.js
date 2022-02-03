@@ -1,4 +1,4 @@
-import '../style/Main.css';
+import './Main.css';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from 'swiper';
 

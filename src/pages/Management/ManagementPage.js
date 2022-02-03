@@ -1,4 +1,4 @@
-import '../style/Management.css';
+import './Management.css';
 import { useState } from 'react'
 
 function ManagementPage() {

@@ -1,4 +1,4 @@
-import "../style/ChatPage.css";
+import "./ChatPage.css";
 
 // 연락처 목록
 const contact = {

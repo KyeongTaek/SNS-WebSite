@@ -1,4 +1,4 @@
-import "../style/MyPage.css";
+import "./MyPage.css";
 function MyPage() {
   return (
     <div className="MyPage">

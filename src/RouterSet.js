@@ -1,17 +1,18 @@
-import BoardModifyPage from './pages/BoardModifyPage'
-import BoardWritePage from './pages/BoardWritePage'
-import ChatPage from './pages/ChatPage'
-import JoinPage from './pages/JoinPage'
-import LoginPage from './pages/LoginPage'
-import MainPage from './pages/MainPage'
-import ManagementPage from './pages/ManagementPage'
-import MyPage from './pages/MyPage'
-import MyConfigPage from './pages/MyConfigPage'
-import NotificationPage from './pages/NotificationPage'
-import PwModifyPage from './pages/PwModifyPage'
-import IdSearchPage from './pages/IdSearchPage'
-import PwSearchPage from './pages/PwSearchPage'
-import ReportPage from './pages/ReportPage'
+import BoardModifyPage from './pages/Board/BoardModifyPage'
+import BoardWritePage from './pages/Board/BoardWritePage'
+import ChatPage from './pages/Chat/ChatPage'
+import JoinPage from './pages/Join/JoinPage'
+import LoginPage from './pages/Login/LoginPage'
+import MainPage from './pages/Main/MainPage'
+import ManagementPage from './pages/Management/ManagementPage'
+import MyPage from './pages/My/MyPage'
+import MyConfigPage from './pages/MyConfig/MyConfigPage'
+import NotificationPage from './pages/Notification/NotificationPage'
+import PwModifyPage from './pages/PwModify/PwModifyPage'
+import PwAuthorityPage from './pages/PwAuthority/PwAuthorityPage'
+import IdSearchPage from './pages/IdSearch/IdSearchPage'
+import PwSearchPage from './pages/PwSearch/PwSearchPage'
+import ReportPage from './pages/Report/ReportPage'
 import './style/common.css';
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
@@ -68,6 +69,7 @@ function RouterSet() {
           <Route path="/myConfig" element={<MyConfigPage/>}/>
           <Route path="/notification" element={<NotificationPage />}/>
           <Route path="/pwModify" element={<PwModifyPage />}/>
+          <Route path="/pwAuthority" element={<PwAuthorityPage />}/>
           <Route path="/idSearch" element={<IdSearchPage />}/>
           <Route path="/pwSearch" element={<PwSearchPage />}/>
           <Route path="/Report" element={<ReportPage />}/>
