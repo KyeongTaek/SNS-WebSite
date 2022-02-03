@@ -1,3 +1,11 @@
+*{
+
+    font-family: "Pretendard_Regular";
+}
+
+h1, h2, h3, h4, h5{
+    font-family: "EliceDigitalBaeum_Bold";
+}
 
 nav li {
     display: inline-block;
@@ -21,6 +29,7 @@ footer {
 }
 
 
+
 /* ===============================================Font=============================================== */
 @font-face {
     font-family: "EliceDigitalBaeum_Bold";
@@ -40,9 +49,10 @@ footer {
 	font-weight: 700;
 	font-display: swap;
 	src: local('Pretendard Bold'), 
+    url('./fonts/Pretendard-Bold.woff2') format('woff2'),
     url('./fonts/Pretendard-Bold.ttf') format('truetype'), 
-    url('./fonts/Pretendard-Bold.woff') format('woff'), 
-    url('./fonts/Pretendard-Bold.woff2') format('woff2');
+    url('./fonts/Pretendard-Bold.woff') format('woff');
+    
 }
 
 
@@ -51,9 +61,10 @@ footer {
 	font-weight: 400;
 	font-display: swap;
 	src: local('Pretendard Regular'), 
+    url('./fonts/Pretendard-Regular.woff2') format('woff2'),
+
     url('./fonts/Pretendard-Regular.ttf') format('truetype'), 
-    url('./fonts/Pretendard-Regular.woff') format('woff'),
-    url('./fonts/Pretendard-Regular.woff2') format('woff2');
+    url('./fonts/Pretendard-Regular.woff') format('woff');
 }
 
 /* ============================================================================================== */
