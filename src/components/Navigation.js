@@ -1,4 +1,4 @@
-import {NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import '../style/navigation.css';
 
 function Navigation() {
@@ -24,6 +24,7 @@ function Navigation() {
 
                 <div className="col-lg-4 navRight">
                     <div className='icon'>
+
                         <NavLink to="/notification"> 
                             <i className="far fa-bell fa-2x"></i>
                         </NavLink>
