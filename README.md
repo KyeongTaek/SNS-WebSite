@@ -40,6 +40,3 @@ Study : 2022/01/17 ~ 2022/02/23
 Project : 2022/01/31 ~ 2022/02/23
 
 
-## 참고문헌
-https://github.com/knut-cs/Curriculum/wiki/Branch-%EB%B0%8F-Commit-%EC%BB%A8%EB%B2%A4%EC%85%98
-
