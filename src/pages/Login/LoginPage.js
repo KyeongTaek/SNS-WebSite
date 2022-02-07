@@ -3,11 +3,10 @@ import '../Login/LoginPage.css';
 function LoginPage() {
   return (
     <div className="LoginPage">
-      <div className="row">
-        <div className="col-lg-8 loginFrame">
+        <div className="loginFrame">
             <h1>로그인 하기</h1>
             
-            <form name="fo" className="needs-va;idation" novalidate>
+            <form name="fo" className="needs-validation" novalidate>
               <h2 className="identification">ID</h2>
               <input type="text" placeholder="Enter id. . ." required></input><br></br>
               <div class="valid-feedback">Valid.</div>
@@ -27,7 +26,7 @@ function LoginPage() {
             </form>
         </div>
        
-        <div className="col-lg-4">
+        <div className="board">
           <br></br>
           <br></br>
           <div className="fixed">
@@ -48,8 +47,6 @@ function LoginPage() {
           <br></br>
           <button className="button">조회수가 높은 게시판-2</button>
         </div>
-        
-      </div>
       
     </div>
 
