@@ -71,7 +71,7 @@
 
 .slide img{
     margin: 0 auto;
-    width: 300px;
+    width: 250px;
 }
 
 .swiper .swiper-button-prev::after{
@@ -102,7 +102,6 @@
     width: 37%;
     margin: 0 auto;
     margin-right: 34%;
-    margin-top: 3%;
     border: 1px solid black;
 }
 
@@ -155,9 +154,8 @@
 }
 .contents{
     height: 100%;
-    margin-left: 2%;
     margin-right: 4%;
-    
+    margin-left: 3%;
 }
 
 .contents i{
@@ -200,7 +198,6 @@
     top: 8%;
     width: 20%;
     padding-top: 3%;
-    border-left: 1px solid black;
     height: 85%;
 }
 .mainRight h5 {

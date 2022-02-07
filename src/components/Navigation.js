@@ -52,14 +52,11 @@ function Navigation() {
                             
                         </div>
                         <div className='userStatus'>
-                            <p>Need login</p>
+                            <p> JungWonJae</p>
                             <i className="fas fa-angle-down fa-lg"></i>
                         </div>
                     </div>
-                    <div className='user2Frame' id='user2Frame'>
-                        <i className="fas fa-user-alt"></i>
 
-                    </div>
                 </div>
             </div>
  
