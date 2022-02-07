@@ -1,14 +1,18 @@
+.mainLeft, .mainMid, .mainRight{
+    display: inline-block;
+
+}
 
 .mainLeft{
     width: 15%;
 }
 .mainLeft img{
-    position: fixed;
+    position: absolute;
+    width: 11%;
+    margin-top: 17%;
+    margin-left: 18%;
     left: -15%;
     top: -15%;
-    width: 200px;
-    margin-top: 17%;
-    margin-left: 20%;
 }
 
 .mainLeft img:last-child{
@@ -28,11 +32,16 @@
     margin-left: 4%;
 }
 
+.favorite-board{
+    padding-left: 13%;
+}
+
+
 .swiper {
     margin-top: 2%;
-
-    width: 100%;
-    height: 350px;
+    
+    width: 70%;
+    height: 400px;
     position: relative;
   }
 
@@ -46,6 +55,7 @@
 
 
 .slide{
+    padding-top: 3%;
     height: 100%;
     margin-left: 7%;
     margin-right: 7%;
@@ -88,18 +98,110 @@
     background-color: #FAFAFA;
 }
 
+.boardFrame{
+    width: 37%;
+    margin: 0 auto;
+    margin-right: 34%;
+    margin-top: 3%;
+    border: 1px solid black;
+}
+
 .board{
-    height: 500px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    
+}
+
+.title{
+    width: 95% !important;
+    margin-top: 0 !important;
+    margin-left: 5%;
+    position: relative;
+    border: none !important;
+    height: 50px;
+}
+
+.title *{
+    display: inline-block;
+    margin: 0;
+}
+.title .circleBox{
+    position: absolute;
+    left: -7%;
+    top: 10%;
+}
+
+.title p{
+    padding-top: 1.5%;
+    padding-left: 5%;
+}
+
+.title i{
+    float: right;
+    margin-right: 2.5%;
+    margin-top: 2.5%;
+    cursor: pointer;
+}
+
+.picture img{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.book{
+    float: right;
+
+}
+.contents{
+    height: 100%;
+    margin-left: 2%;
+    margin-right: 4%;
+    
+}
+
+.contents i{
+    margin-top: 1%;
+    margin-left: 2%;
+
+}
+.contents p{
+    margin-top: 1%;
+    margin-bottom: 0;
+}
+
+.contents .date{
+    font-size: 0.8em;
+}
+
+.comments{
+    margin-top: 1%;
+    position: relative;
+    height: 40px;
+    border-top: 1px solid black;
+}
+.comments i{
+    position: absolute;
+    left: 1%;
+    top: 15%;
+}
+
+.comments input{
+    width: 94%;
+    height: 100%;
+    margin-left: 6%;
+    border: none;
+    padding-left: 1%;
 }
 
 .mainRight{
-    padding-top: 5%;
-    border-left: 1px solid #00000029;
-    display: inline-block;
-    margin-left: 2%;
-    height: 800px;
-    width: 15%;
     position: fixed;
+    right: 1%;
+    top: 8%;
+    width: 20%;
+    padding-top: 3%;
+    border-left: 1px solid black;
+    height: 85%;
 }
 .mainRight h5 {
     padding-left: 5%;
@@ -149,6 +251,3 @@
     top: 1px;
 }
 
-.mainLeft, .mainMid, .mainRight {
-    display: inline-block;
-}

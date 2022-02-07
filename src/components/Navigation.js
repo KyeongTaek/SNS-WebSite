@@ -14,7 +14,7 @@ function Navigation() {
           
             <div className="row">
                 <div className="col-lg-1 logo">
-                    <p>logo</p>
+                    <NavLink to="/">logo</NavLink>
                 </div>
                 <div className="col-lg-3">
                 </div>
