@@ -21,17 +21,6 @@ npm start : react 실행 시키기
  - 알림    
  - 신고    
 
-## Branch
- - main    
- - login    
- - join    
- - board    
- - notice    
- - manager    
- - report    
- - myPage    
- - chatting    
-
 ## Tech    
 [<img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white" />](https://spring.io/) &nbsp;&nbsp;[<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />](https://ko.reactjs.org/) &nbsp;&nbsp;[<img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white" />](https://www.mysql.com/) &nbsp;&nbsp; [<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"/>](https://nodejs.org/ko/) &nbsp;&nbsp; [<img src = "https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white"/>](https://getbootstrap.com/)
 
@@ -50,7 +39,4 @@ npm start : react 실행 시키기
 Study : 2022/01/17 ~ 2022/02/23    
 Project : 2022/01/31 ~ 2022/02/23
 
-
-## 참고문헌
-https://github.com/knut-cs/Curriculum/wiki/Branch-%EB%B0%8F-Commit-%EC%BB%A8%EB%B2%A4%EC%85%98
 
