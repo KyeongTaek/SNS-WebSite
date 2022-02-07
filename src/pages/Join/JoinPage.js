@@ -2,7 +2,7 @@ import '../Join/JoinPage.css';
 
 function JoinPage() {
     return (
-      <div className="JoinPage">
+      <div className="JoinPage" id='wrapper'>
         <div className="row">
           <div className="col-lg-4">
 
@@ -10,7 +10,7 @@ function JoinPage() {
 
           <div className="col-lg-4 joinFrame">
             <h1>회원가입</h1>
-            <form name="fo" className="needs-validation" novalidate>
+            <form name="fo" className="needs-validation" noValidate>
               
               <h2 className="identification">Full Name</h2>
               <input type="text" placeholder="Enter Name. . ." required></input><br></br>
@@ -20,13 +20,13 @@ function JoinPage() {
               
               <h2 className="identification">Password</h2>
               <input type="password" placeholder="Enter password. . ." required></input><br></br>
-              <div class="valid-feedback">Valid.</div>
-              <div class="invalid-feedback">Please fill out this field.</div>
+              <div className="valid-feedback">Valid.</div>
+              <div className="invalid-feedback">Please fill out this field.</div>
               
               <h2 className="identification">Confirm Password</h2>
               <input type="password" placeholder="Enter password. . ." required></input><br></br>
-              <div class="valid-feedback">Valid.</div>
-              <div class="invalid-feedback">Please fill out this field.</div>
+              <div className="valid-feedback">Valid.</div>
+              <div className="invalid-feedback">Please fill out this field.</div>
               
               <input type="submit" value="Log in"></input>
               <ul>

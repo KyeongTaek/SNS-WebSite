@@ -85,6 +85,13 @@ li {
     display: inline;
     padding-left: 3.5%;
 }
+#wrapper{
+    height: 634px;
+}
+
+.container-fluid{
+    height: 100px;
+}
 
 a.joinpage {
     font-family: Pretendard;

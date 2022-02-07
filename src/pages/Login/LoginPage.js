@@ -6,15 +6,15 @@ function LoginPage() {
         <div className="loginFrame">
             <h1>로그인 하기</h1>
             
-            <form name="fo" className="needs-validation" novalidate>
+            <form name="fo" className="needs-validation" noValidate>
               <h2 className="identification">ID</h2>
               <input type="text" placeholder="Enter id. . ." required></input><br></br>
-              <div class="valid-feedback">Valid.</div>
-              <div class="invalid-feedback">Please fill out this field.</div>
+              <div className="valid-feedback">Valid.</div>
+              <div className="invalid-feedback">Please fill out this field.</div>
               <h2 className="identification">PW</h2>
               <input type="password" placeholder="Enter password. . ." required></input><br></br>
-              <div class="valid-feedback">Valid.</div>
-              <div class="invalid-feedback">Please fill out this field.</div>
+              <div className="valid-feedback">Valid.</div>
+              <div className="invalid-feedback">Please fill out this field.</div>
               <input type="submit" value="Log in"></input>
               <ul>
                 <li><a className="loginpage" href="../idSearch">아이디 찾기</a></li>

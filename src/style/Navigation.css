@@ -37,7 +37,8 @@
       position: absolute;
       height: 40px;
       width: 40px;
-      right: 0%;
+      right: -2%;
+      top: 5%;
       border: none;
       background-color: #C6B4EC;
       color: white;
