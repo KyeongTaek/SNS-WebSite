@@ -1,4 +1,4 @@
-import "./Board.css";
+import "./Board.scss";
 import {
   Dropdown,
   InputGroup,
@@ -9,7 +9,7 @@ import {
 } from "react-bootstrap";
 function BoardWritePage() {
   return (
-    <div className="BoardWritePage">
+    <div className="BoardPage">
       <div className="row">
         <div className="col-md-9">
           <h1>게시글 작성</h1>

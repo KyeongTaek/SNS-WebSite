@@ -1,0 +1,145 @@
+.LoginPage{
+    .views {
+        font-family: Pretendard_Regular;
+        font-weight: normal;
+        font-size: 18px;
+        color: #000000;
+    }
+
+    .input {
+        font-family: Pretendard_Regular;
+        font-weight: normal;
+        font-size: 16px;
+        color: #000000BC;
+    }
+
+    .find {
+        font-family: Pretendard_Regular;
+        font-weight: normal;
+        font-size: 14px;
+        color: #000000;
+    }
+
+    h2.identification {
+        font-family: Pretendard_Regular;
+        font-weight: normal;
+        font-size: 12px;
+        color: #00000099;
+    }
+
+    .submit {
+        font-family: Pretendard_Regular;
+        font-weight: bold;
+        font-size: 12px;
+        color: #FFFFFF;
+        background-color: rgba(198, 180, 236, 1);
+        padding: 10px 50px 10px 50px;
+        width: 50%;
+    }
+
+    input[type=submit] {
+        width: 70%;
+        background-color: #C6B4EC;
+        color: white;
+        padding: 14px 20px;
+        margin: 20px 100px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type=text] {
+        width: 538px;
+        height: 61px;
+        border: 1px solid #0000001F;
+        border-radius: 4px;
+        font-family: Pretendard_Regular;
+        font-weight: normal;
+        font-size: 16px;
+        margin-left: 1%;
+
+    }
+
+    input[type=password] {
+        width: 538px;
+        height: 56px;
+        border: 1px solid #0000001F;
+        border-radius: 4px;
+        font-family: Pretendard_Regular;
+        font-weight: normal;
+        font-size: 16px;
+        margin-top: 2px;
+    }
+
+    div.fixed {
+        margin: 3px 2px;
+    }
+
+    .loginFrame form{
+        padding-left: 25%;
+        width: 50%;
+        margin-top: 15%;
+        
+    }
+
+    .loginFrame input{
+        padding-left: 3%;
+    }
+
+
+
+    .loginFrame h1 {
+        padding-left: 35%;
+        font-family: EliceDigitalBaeum_Bold;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        color: #000000;
+        margin-top: 15%;
+    }
+
+    .loginFrame{
+        width: 70%;
+        height: 600px;
+        float: left;
+    }
+
+    .board {
+        width: 30%;
+    }
+    .button {
+        background-color: #E8E7F2;
+        border: none;
+        color: white;
+        width: 408px;
+        height: 272px;
+        margin: 0px 2px;
+        cursor: pointer;
+    }
+
+    .LoginPage ul {
+        margin-left: 20%;
+    }
+
+    li {
+        padding-left: 3.5%;
+    }
+
+
+    a.loginpage {
+        font-family: Pretendard_Regular;
+        font-weight: normal;
+        font-size: 14px;
+    }
+
+    a.loginpage:link {
+        color: black;
+        text-decoration: none;
+    }
+
+    a.loginpage:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+}

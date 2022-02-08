@@ -1,0 +1,151 @@
+.Navigation{
+    .row {
+        width: 100%;
+        height: 40px;
+    }
+    
+    nav div .logo{
+        padding-left: 3%;
+        
+    }
+    nav div .logo p {
+        margin: 0;
+        margin-top: 15%;
+    }
+    
+    .search{
+        position: relative;
+        
+    }
+    
+    #searchContent{
+        width: 100%;
+        height: 40px;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        border: none;
+        padding-left: 5%;
+    }
+    .searchFrame{
+        position: relative;
+        margin-left: 15%;
+        margin-top: 3px;
+        width: 70%;
+    }
+    
+    .img-button {
+    
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        right: -18%;
+        top: 4%;
+        border: none;
+        background-color: #C6B4EC;
+        color: white;
+    }
+    
+    
+    nav div .search input::placeholder {
+        color: #BCE0FD;
+    }
+    
+    
+    
+    nav .row div{
+        padding-top: 0.4%;
+        padding-bottom: 0.4%;
+        background-color: #C3BEF0;
+    }
+    
+    .navRight{
+        position: relative;
+    }
+    
+    .navRight * {
+        display: inline-block;
+    }
+    
+
+    
+    .icon{
+        width: 45%;
+        height: 45px;
+
+    }
+    
+    .icon *{
+        float: right;
+        margin-left: 10%;
+    }
+
+    .icon i{
+        margin-top: 10px;
+        float: right;
+    
+        color: white;
+        cursor: pointer;
+    }
+    .icon i:first-child{
+        margin-right: 15%;
+    }
+    .icon i:hover{
+        transform: scale(1.2);
+    }
+    .user .circleBox {
+        margin-left: 20%;
+        width: 40px;
+        height: 40px; 
+        border-radius: 70%;
+        background: white;
+        overflow: hidden;
+        border: 1px solid white;
+        position: relative;
+        
+    }
+    .user {
+        position: relative;
+        width: 45%;
+    }
+    
+    .user *{
+        display: inline-block;
+    }
+    
+    .userStatus{
+        position: absolute;
+        left: 40%;
+        top: 25%;
+        color: white;
+    }
+    
+    .userStatus i {
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    .user2Frame{
+        position: absolute;
+        top: 0;
+        width: 11.5%;
+        height: 100%;
+        
+    }
+    
+    #user2Frame{
+        background-color: #C6B4EC;
+        cursor: pointer;
+    }
+    
+    .user2Frame i{
+        margin-top: 28%;
+        color: white;
+        margin-left: 40%;
+    }
+    
+    .circleBox i {
+        color: #C3BEF0;
+        position: absolute;
+        left: 28%;
+        top: 28%;
+    }
+}

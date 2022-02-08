@@ -1,5 +1,6 @@
 import { Form } from "react-bootstrap"
-import "./ReportPage.css";
+
+import "./ReportPage.scss";
 
 
 function ReportPage() {

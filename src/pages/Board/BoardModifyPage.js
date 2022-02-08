@@ -1,4 +1,4 @@
-import "./Board.css";
+import "./Board.scss";
 import {
   Dropdown,
   InputGroup,
@@ -10,7 +10,7 @@ import {
 
 function BoardModifyPage() {
   return (
-    <div className="BoardModifyPage">
+    <div className="BoardPage">
       <div className="row">
         <div className="col-md-9">
           <h1>게시글 수정</h1>

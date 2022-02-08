@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import '../style/Navigation.css';
+import '../style/Navigation.scss';
 
 function Navigation() {
              
@@ -14,7 +14,7 @@ function Navigation() {
           
             <div className="row">
                 <div className="col-lg-1 logo">
-                    <p>logo</p>
+                    <NavLink to="/">logo</NavLink>
                 </div>
                 <div className="col-lg-3">
                 </div>
@@ -52,14 +52,11 @@ function Navigation() {
                             
                         </div>
                         <div className='userStatus'>
-                            <p>Need login</p>
+                            <p> JungWonJae</p>
                             <i className="fas fa-angle-down fa-lg"></i>
                         </div>
                     </div>
-                    <div className='user2Frame' id='user2Frame'>
-                        <i className="fas fa-user-alt"></i>
 
-                    </div>
                 </div>
             </div>
  
