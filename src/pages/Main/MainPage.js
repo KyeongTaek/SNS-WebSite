@@ -4,7 +4,7 @@ import { Navigation } from 'swiper';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
-
+import {Dropdown} from 'react-bootstrap'
 
 
 function MainPage() {
@@ -26,11 +26,25 @@ function board(){
     <div className='boardFrame'>
       <div className='board'>
       <div className='title'>
-        <div className='circleBox'>
-          <img src='img/advertisement1.jpg' alt='board'></img>
+        wjddjswo
+
+        <div className='titleLeft'>
+          <div className='circleBox'>
+            <img src='img/advertisement1.jpg' alt='board'></img>
+          </div>
         </div>
-         <p>wjddjswo</p>
-         <i className="fas fa-list fa-lg"></i>
+         <Dropdown className="userDropBtn" autoClose={true}>
+            <Dropdown.Toggle id="dropdown-autoclose-false">
+              <i className="fas fa-list fa-lg"></i>
+                    
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+                <Dropdown.Item href="/#!">상대방 프로필 보기</Dropdown.Item>
+                <Dropdown.Item href="#!">게시물 보지 않기</Dropdown.Item>
+                <Dropdown.Item href="#!">게시물 신고하기</Dropdown.Item>
+            </Dropdown.Menu>
+            </Dropdown>
+         
       </div>
         <div className='picture'>
           <img src='img/board1.jpg' alt='board'></img>
@@ -182,7 +196,7 @@ function phone(){
           <p className='chatText2'>asds</p>
           <i className="far fa-envelope fa-2x"></i>
 
-        </div><br/>
+        </div>
         <div className='chatFrame'>
           <div className='circleBox'>
             <img src="img/advertisement1.jpg" alt="채팅 이미지"/>
@@ -192,7 +206,7 @@ function phone(){
           <p className='chatText2'>asds</p>
           <i className="far fa-envelope fa-2x"></i>
 
-        </div><br/>
+        </div>
         <div className='chatFrame'>
           <div className='circleBox'>
             <img src="img/advertisement1.jpg" alt="채팅 이미지"/>
@@ -203,7 +217,7 @@ function phone(){
 
           <i className="far fa-envelope fa-2x"></i>
 
-        </div><br/>
+        </div>
 
 
           
