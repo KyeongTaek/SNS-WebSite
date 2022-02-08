@@ -1,4 +1,4 @@
-import '../IdSearch/IdSearchPage.css'
+import '../IdSearch/IdSearchPage.scss'
 function IdSearchPage() {
     return (
       <div className="IdSearchPage">
@@ -9,16 +9,6 @@ function IdSearchPage() {
 
               <form name="IdSearch">
                 <div class="items">
-                <br></br>
-                  <br></br>
-                  <br></br>
-                  <br></br>
-                  <br></br>
-                  <br></br>
-                  <br></br>
-                  <br></br>
-                  <br></br>
-                  <br></br>
                   <h1>아이디 찾기</h1>
                   <br></br>
                   <br></br>

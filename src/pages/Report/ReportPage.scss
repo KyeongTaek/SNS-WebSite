@@ -1,0 +1,40 @@
+.ReportPage{
+  .title{
+    border: none;
+    font-size: 22px;
+  }
+
+  .content span{
+    font-size: 18px;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+
+  .content label{
+    font-size: 18px;
+    padding-right: 10px;
+  }
+
+  .content input[type='radio']{
+    width: 0.9rem;
+    height: 0.9rem;
+  }
+
+  .content input[type='text']{
+    margin-bottom: 10px;
+  }
+
+  .content textarea{
+    margin-bottom: 5px;
+    
+  }
+
+  .content input[type='submit']{
+    background-color: #C6B4EC;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 8px 20px 8px 20px;
+    float: right;
+  }
+}

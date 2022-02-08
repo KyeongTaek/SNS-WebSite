@@ -1,4 +1,4 @@
-import './Main.css';
+import './Main.scss';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from 'swiper';
 
@@ -13,6 +13,7 @@ function MainPage() {
       
       {advertisement()}
       {mainSwiper()}
+      {board()}
       {board()}
       {phone()}
       </div>
@@ -29,7 +30,7 @@ function board(){
           <img src='img/advertisement1.jpg' alt='board'></img>
         </div>
          <p>wjddjswo</p>
-         <i class="fas fa-list fa-lg"></i>
+         <i className="fas fa-list fa-lg"></i>
       </div>
         <div className='picture'>
           <img src='img/board1.jpg' alt='board'></img>
@@ -49,7 +50,7 @@ function board(){
         </div>
         </div>
         <div className='comments'>
-        <i class="far fa-comment-dots fa-2x"></i>
+        <i className="far fa-comment-dots fa-2x"></i>
         <input type="text" placeholder='댓글 달기'></input>
         </div>
     </div>

@@ -1,4 +1,4 @@
-import "./NotificationPage.css";
+import "./NotificationPage.scss";
 import { ListGroupItem } from "react-bootstrap";
 
 function NotificationPage() {

@@ -1,4 +1,4 @@
-import "./ChatPage.css";
+import "./ChatPage.scss";
 
 // 연락처 목록
 const contact = {
@@ -75,8 +75,10 @@ function getContacts() {
 }
 
 function getChats() {
-  return chats.content.map(chat => chat.isMe ? <div className="chatByMe"><label>ME</label><div>{chat.talk}</div></div>
-    : <div className="chatByFriend"><label>{chats.name}</label><div>{chat.talk}</div></div>)
+  return chats.content.map((chat, index) => 
+  
+  chat.isMe ? <div className="chatByMe"><label>ME</label><div>{chat.talk}</div></div>
+    : <div className="chatByFriend"><label>{chats.name}</label><div >{chat.talk}</div></div>)
 }
 
 

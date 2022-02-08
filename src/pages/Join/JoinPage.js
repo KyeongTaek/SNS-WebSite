@@ -1,4 +1,4 @@
-import '../Join/JoinPage.css';
+import '../Join/JoinPage.scss';
 
 function JoinPage() {
     return (

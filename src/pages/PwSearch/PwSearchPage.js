@@ -1,4 +1,4 @@
-import '../PwSearch/PwSearchPage.css'
+import '../PwSearch/PwSearchPage.scss'
 function PwSearchPage() {
     return (
       <div className="PwSearchPage">

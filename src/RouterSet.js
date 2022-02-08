@@ -13,7 +13,7 @@ import PwAuthorityPage from './pages/PwAuthority/PwAuthorityPage'
 import IdSearchPage from './pages/IdSearch/IdSearchPage'
 import PwSearchPage from './pages/PwSearch/PwSearchPage'
 import ReportPage from './pages/Report/ReportPage'
-import './style/common.css';
+import './style/common.scss';
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 
