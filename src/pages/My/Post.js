@@ -1,4 +1,3 @@
-import "./MyPage.css";
 
 function Post() {
   return (

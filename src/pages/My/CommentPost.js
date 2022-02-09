@@ -1,5 +1,3 @@
-import "./MyPage.css";
-
 function CommentPost() {
   return (
     <div className="gallery">
