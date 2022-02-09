@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import '../style/Navigation.scss';
-
+import { Dropdown } from 'react-bootstrap';
 function Navigation() {
              
         //  {/* Frame 페이지를 이름에 따라 보여줄지 안보여줄지 설정 */}
@@ -10,16 +10,13 @@ function Navigation() {
     return (
       <div className="Navigation">
         
-          <nav>
-          
-            <div className="row">
-                <div className="col-lg-1 logo">
+          <nav >
+            <div className='container'>
+                <div className="logo">
                     <NavLink to="/">logo</NavLink>
                 </div>
-                <div className="col-lg-3">
-                </div>
-
-                <div className="col-lg-4 search">
+    
+                <div className="search">
                     <div className='searchFrame'>
                         <input type="text" id="searchContent" name = "searchContent" placeholder='search...'/>
                         <button className="img-button"><i className="fas fa-search fa-sm"></i></button>
@@ -27,7 +24,7 @@ function Navigation() {
 
                 </div>
 
-                <div className="col-lg-4 navRight">
+                <div className="navRight">
                     <div className='icon'>
 
                         <NavLink to="/notification"> 
@@ -41,9 +38,6 @@ function Navigation() {
                         <NavLink to="/boardWrite">
                             <i className="fas fa-file-medical fa-2x"></i>
                         </NavLink>
-                        <NavLink to="/boardWrite">
-                         <i className="fas fa-film fa-2x"></i>
-                        </NavLink>
                     </div>
                 
                     <div className='user'>
@@ -53,15 +47,26 @@ function Navigation() {
                         </div>
                         <div className='userStatus'>
                             <p> JungWonJae</p>
-                            <i className="fas fa-angle-down fa-lg"></i>
+                        </div>
+                        
+                        <div className='userDropFrame'>
+                        {/* <i className="fas fa-angle-down fa-lg"></i> */}
+
+                        <Dropdown className="userDropBtn" autoClose={true}>
+                                    <Dropdown.Toggle id="dropdown-autoclose-false">
+                                    </Dropdown.Toggle>
+                        <Dropdown.Menu>
+                            <Dropdown.Item href="/my">내 프로필 보기</Dropdown.Item>
+                            <Dropdown.Item href="#!">설정 및 개인정보</Dropdown.Item>
+                            <Dropdown.Item href="#!">로그아웃</Dropdown.Item>
+                        </Dropdown.Menu>
+                        </Dropdown>
                         </div>
                     </div>
-
+                   
                 </div>
-            </div>
- 
-
               <br/>
+              </div>
         </nav>
       </div>
     );

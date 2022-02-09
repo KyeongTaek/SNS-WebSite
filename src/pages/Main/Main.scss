@@ -41,7 +41,7 @@
     .swiper {
         margin-top: 2%;
         
-        width: 70%;
+        width: 75%;
         height: 400px;
         position: relative;
     }
@@ -56,10 +56,10 @@
 
 
     .slide{
-        padding-top: 3%;
+        padding-top: 5%;
         height: 100%;
-        margin-left: 7%;
-        margin-right: 7%;
+        margin-left: 8%;
+        margin-right: 8%;
     }
 
     .card{
@@ -115,16 +115,51 @@
     }
 
     .title{
+        display: flex;
         width: 95% !important;
         margin-top: 0 !important;
         margin-left: 5%;
         position: relative;
         border: none !important;
         height: 50px;
+        align-items: center;
+        padding-left: 7%;
+        .titleLeft{
+            margin-right: auto; 
+            align-items: center;
+        }
+        .userDropBtn{
+            .dropdown-toggle{
+                float: right;
+                background-color: white!important;
+                color: black;
+                border: none;
+                box-shadow:none;
+                font-size: 1.2em;
+                button{
+                    display: none;
+                }
+            }
+            .dropdown-toggle::after{
+                display: none;
+            }
+            .dropdown-toggle:focus{
+                box-shadow: none;
+                
+            }
+            .dropdown-toggle:hover{
+                background-color: white;
+            }
+            .dropdown-toggle:active{
+                background: white !important;
+                color: black;
+                
+            }
+    
+        }
     }
 
     .title *{
-        display: inline-block;
         margin: 0;
     }
     .title .circleBox{
@@ -227,9 +262,14 @@
     }
 
     .chatFrame{
+        margin-top: 2%;
         position: relative;
+        padding:15px 0;
     }
-
+    .chatFrame:hover{
+        background-color: rgb(214, 211, 211);
+        cursor: pointer;
+    }
     .chatText{
         position: absolute;
         left: 15%;
@@ -247,7 +287,8 @@
     .chatFrame i{
         position: absolute;
         right: 10px;
-        top: 1px;
+        top: 15px;
     }
-
+    
+    
 }
