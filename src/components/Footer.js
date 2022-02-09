@@ -2,7 +2,7 @@ import '../style/Footer.scss'
 
 function Footer() {
     return (
-      <div className="container-fluid navbar-fixed-bottom">
+      <div className="Footer">
         <footer>
           <div className='contents'>
             <p>
