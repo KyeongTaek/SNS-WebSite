@@ -27,15 +27,19 @@ function Navigation() {
                 <div className="navRight">
                     <div className='icon'>
 
-                        <NavLink to="/notification"> 
+                        <NavLink className="iconFrame" to="/notification"> 
                             <i className="far fa-bell fa-2x"></i>
+                            <div>
+                                1
+                            </div>
                         </NavLink>
-                        <NavLink to="/chat">
+                        <NavLink className="iconFrame" to="/chat">
                             <i className="far fa-comment-dots fa-2x"></i>
+                            <div>
+                                2
+                            </div>
                         </NavLink>
-                      
-
-                        <NavLink to="/boardWrite">
+                        <NavLink className="iconFrame" to="/boardWrite">
                             <i className="fas fa-file-medical fa-2x"></i>
                         </NavLink>
                     </div>
