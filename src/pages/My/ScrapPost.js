@@ -1,5 +1,3 @@
-import "./MyPage.css";
-
 function ScrapPost() {
   return (
     <div className="gallery">
