@@ -1,5 +1,5 @@
 import { useRef, useCallback, useEffect } from "react";
-import "./CModal.css";
+import "./CModal.scss";
 function CModal({ showModal, setShowModal }) {
   const modalRef = useRef();
 

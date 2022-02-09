@@ -1,4 +1,4 @@
-import "./MyPage.css";
+import "./MyPage.scss";
 import { useState } from "react";
 import FollowerModal from "./FollowerModal";
 import FollowModal from "./FollowModal";
