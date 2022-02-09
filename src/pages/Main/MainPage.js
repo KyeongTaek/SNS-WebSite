@@ -1,7 +1,8 @@
 import './Main.scss';
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from 'swiper';
-
+import { Navigation, Pagination } from 'swiper';
+import "swiper/css";
+import "swiper/css/pagination";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import {Dropdown} from 'react-bootstrap'
@@ -10,7 +11,6 @@ import {Dropdown} from 'react-bootstrap'
 function MainPage() {
   return (
     <div className="MainPage">
-      
       {advertisement()}
       {mainSwiper()}
       {board()}
@@ -46,8 +46,14 @@ function board(){
             </Dropdown>
          
       </div>
-        <div className='picture'>
-          <img src='img/board1.jpg' alt='board'></img>
+        <div className='picture2'>
+        <Swiper pagination={true} modules={[Pagination]} className="mySwiper2">
+        <SwiperSlide>          <img src='img/board1.jpg' alt='board'></img>
+        </SwiperSlide>
+        <SwiperSlide><img src='img/board1.jpg' alt='board'></img></SwiperSlide>
+        <SwiperSlide><img src='img/board1.jpg' alt='board'></img></SwiperSlide>
+
+      </Swiper>
         </div>
 
         <div className='contents'>
@@ -88,10 +94,6 @@ function mainSwiper(){
           <h5 className='favorite-board'>인기 게시물</h5>
         <Swiper
         slidesPerView={2}
-  
-        pagination={{
-          type:"fraction"
-        }}
         navigation={true}
         modules={[ Navigation]}
         className="mySwiper"
@@ -199,6 +201,7 @@ function phone(){
         </div>
         <div className='chatFrame'>
           <div className='circleBox'>
+            
             <img src="img/advertisement1.jpg" alt="채팅 이미지"/>
             
           </div>

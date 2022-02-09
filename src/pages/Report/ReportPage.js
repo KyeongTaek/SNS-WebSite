@@ -1,4 +1,5 @@
 import { Form } from "react-bootstrap"
+
 import "./ReportPage.scss";
 
 

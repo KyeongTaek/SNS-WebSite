@@ -27,20 +27,9 @@
         width: 65%;
         margin: 0 auto;
         margin-top: 1%;
-    }
-
-    .mainMid h5{
-        margin-left: 4%;
-    }
-
-    .favorite-board{
-        padding-left: 13%;
-    }
-
-
+        
     .swiper {
         margin-top: 2%;
-        
         width: 75%;
         height: 400px;
         position: relative;
@@ -99,6 +88,18 @@
         background-color: #FAFAFA;
     }
 
+    }
+
+    .mainMid h5{
+        margin-left: 4%;
+    }
+
+    .favorite-board{
+        padding-left: 13%;
+    }
+
+  
+
     .boardFrame{
         width: 37%;
         margin: 0 auto;
@@ -114,6 +115,8 @@
         
     }
 
+
+    
     .title{
         display: flex;
         width: 95% !important;
@@ -180,10 +183,25 @@
         cursor: pointer;
     }
 
-    .picture img{
-        width: 100%;
-        margin: 0 auto;
+    .picture2{
+        img{
+            width: 100%;
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .swiper{
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: #5100ff;
+          }
+      
     }
+
 
     .book{
         float: right;
