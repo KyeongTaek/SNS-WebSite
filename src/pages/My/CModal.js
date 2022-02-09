@@ -6,6 +6,7 @@ function CModal({ showModal, setShowModal }) {
   const closeModal = (e) => {
     if (modalRef.current === e.target) {
       setShowModal(false);
+      document.body.style.overflow = "unset";
     }
   };
 
@@ -13,6 +14,7 @@ function CModal({ showModal, setShowModal }) {
     (e) => {
       if (e.key === "Escape" && showModal) {
         setShowModal(false);
+        document.body.style.overflow = "unset";
       }
     },
     [setShowModal, showModal]
@@ -22,7 +24,6 @@ function CModal({ showModal, setShowModal }) {
     document.addEventListener("keydown", closeKey);
     return () => document.removeEventListener("keydown", closeKey);
   }, [closeKey]);
-
   if (!showModal) return null;
   return (
     <div id="modal_box" ref={modalRef} onClick={closeModal}>
@@ -44,7 +45,7 @@ function CModal({ showModal, setShowModal }) {
             <div className="circleBox">
               <img src="img/advertisement1.jpg" alt=""></img>
             </div>
-            <p>주서먹기~~</p>
+            <p>사용자이름</p>
             <i className="fas fa-list fa-lg"></i>
           </div>
           <div className="customLine"></div>
@@ -57,7 +58,7 @@ function CModal({ showModal, setShowModal }) {
               <p>작성자 프로필</p>
             </div>
             <div className="customMargin"></div>
-            <p>내용들어가ㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏ</p>
+            <p>input content~~~~~~~~~~~~~~~~~~</p>
           </div>
           <div className="customLine"></div>
           <div className="contents">
