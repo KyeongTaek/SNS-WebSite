@@ -22,6 +22,7 @@ const FollowModal = ({ show, onHide }) => {
               placeholder="search..."
             />
             <button className="modal_img-button">
+
               <i className="fas fa-search fa-sm"></i>
             </button>
           </div>
@@ -29,7 +30,21 @@ const FollowModal = ({ show, onHide }) => {
         <ListGroup as="ol" numbered>
           <ListGroup.Item as="li" className="d-flex bd-highlight mb-3">
             <div className="p-2 bd-highlight">
+
               <div className="modal_circleBox">
+
+                <img src="img/advertisement1.jpg" alt=""></img>
+              </div>
+            </div>
+            <div className="me-auto">사용자 이름</div>
+
+            <Button>삭제</Button>
+          </ListGroup.Item>
+          <ListGroup.Item as="li" className="d-flex bd-highlight mb-3">
+            <div className="p-2 bd-highlight">
+
+              <div className="modal_circleBox">
+
                 <img src="img/advertisement1.jpg" alt=""></img>
               </div>
             </div>
@@ -40,6 +55,7 @@ const FollowModal = ({ show, onHide }) => {
           <ListGroup.Item as="li" className="d-flex bd-highlight mb-3">
             <div className="p-2 bd-highlight">
               <div className="modal_circleBox">
+
                 <img src="img/advertisement1.jpg" alt=""></img>
               </div>
             </div>
@@ -50,6 +66,7 @@ const FollowModal = ({ show, onHide }) => {
           <ListGroup.Item as="li" className="d-flex bd-highlight mb-3">
             <div className="p-2 bd-highlight">
               <div className="modal_circleBox">
+
                 <img src="img/advertisement1.jpg" alt=""></img>
               </div>
             </div>
@@ -60,6 +77,7 @@ const FollowModal = ({ show, onHide }) => {
           <ListGroup.Item as="li" className="d-flex bd-highlight mb-3">
             <div className="p-2 bd-highlight">
               <div className="modal_circleBox">
+
                 <img src="img/advertisement1.jpg" alt=""></img>
               </div>
             </div>
@@ -70,6 +88,7 @@ const FollowModal = ({ show, onHide }) => {
           <ListGroup.Item as="li" className="d-flex bd-highlight mb-3">
             <div className="p-2 bd-highlight">
               <div className="modal_circleBox">
+
                 <img src="img/advertisement1.jpg" alt=""></img>
               </div>
             </div>
@@ -79,7 +98,9 @@ const FollowModal = ({ show, onHide }) => {
           </ListGroup.Item>
           <ListGroup.Item as="li" className="d-flex bd-highlight mb-3">
             <div className="p-2 bd-highlight">
+
               <div className="modal_circleBox">
+
                 <img src="img/advertisement1.jpg" alt=""></img>
               </div>
             </div>
@@ -89,17 +110,9 @@ const FollowModal = ({ show, onHide }) => {
           </ListGroup.Item>
           <ListGroup.Item as="li" className="d-flex bd-highlight mb-3">
             <div className="p-2 bd-highlight">
-              <div className="modal_circleBox">
-                <img src="img/advertisement1.jpg" alt=""></img>
-              </div>
-            </div>
-            <div className="me-auto">사용자 이름</div>
 
-            <Button>삭제</Button>
-          </ListGroup.Item>
-          <ListGroup.Item as="li" className="d-flex bd-highlight mb-3">
-            <div className="p-2 bd-highlight">
               <div className="modal_circleBox">
+
                 <img src="img/advertisement1.jpg" alt=""></img>
               </div>
             </div>
