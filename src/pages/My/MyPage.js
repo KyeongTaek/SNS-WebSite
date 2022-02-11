@@ -2,7 +2,7 @@ import "./MyPage.scss";
 import { useState } from "react";
 import FollowerModal from "./FollowerModal";
 import FollowModal from "./FollowModal";
-
+import CModal from "./CModal";
 import Post from "./Post";
 import CommentPost from "./CommentPost";
 import ScrapPost from "./ScrapPost";
@@ -10,13 +10,11 @@ import { Nav } from "react-bootstrap";
 function MyPage() {
   const [FollowerModalOn, setFollowerModalOn] = useState(false);
   const [FollowModalOn, setFollowModalOn] = useState(false);
-
+  const [showModal, setShowModal] = useState(false);
   let [Tap, setTap] = useState(0);
   const activeModal = () => {
     setShowModal((open) => !open);
-    document.body.style.overflow = "hidden";
   };
-
   function TabContent(props) {
     if (props.Tap === 0) {
       return <Post />;
