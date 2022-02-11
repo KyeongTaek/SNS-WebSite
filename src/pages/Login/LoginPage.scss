@@ -6,6 +6,10 @@
         color: #000000;
     }
 
+    .buttons h1.views {
+        margin-top: 15%;
+    }
+
     .input {
         font-family: Pretendard_Regular;
         font-weight: normal;
@@ -20,65 +24,70 @@
         color: #000000;
     }
 
+//    .submit {
+//        font-family: Pretendard_Regular;
+//        font-weight: bold;
+//        font-size: 12px;
+//        color: #FFFFFF;
+//        background-color: rgba(198, 180, 236, 1);
+//       padding: 10px 50px 10px 50px;
+//        width: 50%;
+//    }
+
+
     h2.identification {
         font-family: Pretendard_Regular;
         font-weight: normal;
         font-size: 12px;
-        color: #00000099;
-    }
-
-    .submit {
-        font-family: Pretendard_Regular;
-        font-weight: bold;
-        font-size: 12px;
-        color: #FFFFFF;
-        background-color: rgba(198, 180, 236, 1);
-        padding: 10px 50px 10px 50px;
-        width: 50%;
+        color: #00000099;  
     }
 
     input[type=submit] {
-        width: 70%;
+        width: 60%;
         background-color: #C6B4EC;
         color: white;
-        padding: 14px 20px;
-        margin: 20px 100px;
+        padding: 14px;
+        margin: 10% 20%;
         border: none;
         border-radius: 4px;
         cursor: pointer;
+        //align-items: center;
     }
 
     input[type=text] {
-        width: 538px;
+        width: 100%;
         height: 61px;
         border: 1px solid #0000001F;
         border-radius: 4px;
         font-family: Pretendard_Regular;
         font-weight: normal;
         font-size: 16px;
-        margin-left: 1%;
+        //margin-left: 1%;
 
     }
 
     input[type=password] {
-        width: 538px;
+        width: 100%;
         height: 56px;
         border: 1px solid #0000001F;
         border-radius: 4px;
         font-family: Pretendard_Regular;
         font-weight: normal;
         font-size: 16px;
-        margin-top: 2px;
+        margin-top: 2%;
     }
 
-    div.fixed {
-        margin: 3px 2px;
-    }
+//    div.fixed {
+//        margin: 3% 2%;
+//    }
 
     .loginFrame form{
-        padding-left: 25%;
-        width: 50%;
-        margin-top: 15%;
+        //margin-left: 50%;
+        width: 60%;
+        //margin-top: 15%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
         
     }
 
@@ -88,41 +97,49 @@
 
 
 
-    .loginFrame h1 {
-        padding-left: 35%;
+    .loginFrame form h1 {
+        //padding-left: 35%;
         font-family: EliceDigitalBaeum_Bold;
         font-style: normal;
         font-weight: normal;
         font-size: 20px;
         color: #000000;
-        margin-top: 15%;
+        margin-top: 30%;
+        margin-left: 5%;
+        margin-bottom: 5%;
     }
 
     .loginFrame{
         width: 70%;
-        height: 600px;
-        float: left;
+        //height: 100%;
+        //float: left;
+        display: flex;
+        //flex-direction: row;
     }
 
     .board {
         width: 30%;
+        display: flex;
+        //flex-direction: column;
     }
-    .button {
+    .buttons button {
         background-color: #E8E7F2;
         border: none;
         color: white;
-        width: 408px;
+        width: 100%;
         height: 272px;
-        margin: 0px 2px;
+        margin: 30%, 1%;
         cursor: pointer;
     }
 
-    .LoginPage ul {
-        margin-left: 20%;
+    ul {
+        margin-left: 25%;
     }
+
 
     li {
         padding-left: 3.5%;
+        display: inline;
     }
 
 
@@ -130,6 +147,7 @@
         font-family: Pretendard_Regular;
         font-weight: normal;
         font-size: 14px;
+        //margin-left: 10%;
     }
 
     a.loginpage:link {
@@ -140,6 +158,29 @@
     a.loginpage:hover {
         cursor: pointer;
         text-decoration: underline;
+    }
+
+    .board .side{
+        width: 20%;
+        display: flex;
+    }
+
+    .side {
+        width: 20%;
+        //margin-left: 50;
+        display: flex;
+    }
+
+    .Container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 80%;
     }
 
 }
