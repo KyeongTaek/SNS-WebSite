@@ -1,6 +1,15 @@
+import { useState } from "react";
+import CModal from "./CModal";
+
 function CommentPost() {
+  const [showModal, setShowModal] = useState(false);
+  const activeModal = () => {
+    setShowModal((open) => !open);
+    document.body.style.overflow = "hidden";
+  };
   return (
     <div className="gallery">
+      <CModal showModal={showModal} setShowModal={setShowModal} />
       <div className="gallery-item" tabindex="0">
         <img
           src="https://images.unsplash.com/photo-1497445462247-4330a224fdb1?w=500&h=500&fit=crop"
@@ -8,7 +17,7 @@ function CommentPost() {
           alt=""
         />
 
-        <div className="gallery-item-info">
+        <div className="gallery-item-info" onClick={activeModal}>
           <ul>
             <li className="gallery-item-likes">
               <span className="visually-hidden">Likes:</span>
@@ -29,7 +38,7 @@ function CommentPost() {
           alt=""
         />
 
-        <div className="gallery-item-info">
+        <div className="gallery-item-info" onClick={activeModal}>
           <ul>
             <li className="gallery-item-likes">
               <span className="visually-hidden">Likes:</span>
@@ -55,7 +64,7 @@ function CommentPost() {
           <i className="fas fa-clone" aria-hidden="true"></i>
         </div>
 
-        <div className="gallery-item-info">
+        <div className="gallery-item-info" onClick={activeModal}>
           <ul>
             <li className="gallery-item-likes">
               <span className="visually-hidden">Likes:</span>
@@ -81,7 +90,7 @@ function CommentPost() {
           <i className="fas fa-video" aria-hidden="true"></i>
         </div>
 
-        <div className="gallery-item-info">
+        <div className="gallery-item-info" onClick={activeModal}>
           <ul>
             <li className="gallery-item-likes">
               <span className="visually-hidden">Likes:</span>
@@ -107,7 +116,7 @@ function CommentPost() {
           <i className="fas fa-clone" aria-hidden="true"></i>
         </div>
 
-        <div className="gallery-item-info">
+        <div className="gallery-item-info" onClick={activeModal}>
           <ul>
             <li className="gallery-item-likes">
               <span className="visually-hidden">Likes:</span>
@@ -128,7 +137,7 @@ function CommentPost() {
           alt=""
         />
 
-        <div className="gallery-item-info">
+        <div className="gallery-item-info" onClick={activeModal}>
           <ul>
             <li className="gallery-item-likes">
               <span className="visually-hidden">Likes:</span>
@@ -154,7 +163,7 @@ function CommentPost() {
           <i className="fas fa-clone" aria-hidden="true"></i>
         </div>
 
-        <div className="gallery-item-info">
+        <div className="gallery-item-info" onClick={activeModal}>
           <ul>
             <li className="gallery-item-likes">
               <span className="visually-hidden">Likes:</span>
@@ -175,7 +184,7 @@ function CommentPost() {
           alt=""
         />
 
-        <div className="gallery-item-info">
+        <div className="gallery-item-info" onClick={activeModal}>
           <ul>
             <li className="gallery-item-likes">
               <span className="visually-hidden">Likes:</span>
@@ -201,7 +210,7 @@ function CommentPost() {
           <i className="fas fa-clone" aria-hidden="true"></i>
         </div>
 
-        <div className="gallery-item-info">
+        <div className="gallery-item-info" onClick={activeModal}>
           <ul>
             <li className="gallery-item-likes">
               <span className="visually-hidden">Likes:</span>
@@ -222,7 +231,7 @@ function CommentPost() {
           alt=""
         />
 
-        <div className="gallery-item-info">
+        <div className="gallery-item-info" onClick={activeModal}>
           <ul>
             <li className="gallery-item-likes">
               <span className="visually-hidden">Likes:</span>
@@ -243,7 +252,7 @@ function CommentPost() {
           alt=""
         />
 
-        <div className="gallery-item-info">
+        <div className="gallery-item-info" onClick={activeModal}>
           <ul>
             <li className="gallery-item-likes">
               <span className="visually-hidden">Likes:</span>
@@ -269,7 +278,7 @@ function CommentPost() {
           <i className="fas fa-video" aria-hidden="true"></i>
         </div>
 
-        <div className="gallery-item-info">
+        <div className="gallery-item-info" onClick={activeModal}>
           <ul>
             <li className="gallery-item-likes">
               <span className="visually-hidden">Likes:</span>
