@@ -9,26 +9,16 @@ function PwSearchPage() {
 
           <form name="PwSearch">
             <div class="items">
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
               <h1>비밀번호 찾기</h1>
               <br></br>
               <br></br>
             </div>
             <div class="items">
-              <h2 className="identification">ID</h2><br></br>
+              <h2 className="identification">ID</h2>
               <input type="text" placeholder="아이디를 입력해주세요" required></input><br></br>
             </div>
             <div class="items">
-              <h2 className="identification">Email</h2><br></br>
+              <h2 className="identification">Email</h2>
               <input type="email" placeholder="이메일을 입력해주세요" required></input><br></br>
             </div>
             <div class="items">

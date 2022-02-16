@@ -14,7 +14,7 @@
     form {
         display: flex;
         flex-direction: column;
-        flex-basis: 40%;
+        flex-basis: 38%;
     }
 
     .items {
@@ -23,7 +23,7 @@
     }
 
     h1 {
-        padding-left: 35%;
+        padding-left: 40%;
         font-family: EliceDigitalBaeum;
         font-style: normal;
         font-weight: normal;
@@ -71,12 +71,13 @@
         color: white;
         padding: 14px 20px;
         margin: 20px 100px;
-        margin-left: 30%;
+        margin-left: 33%;
         border: none;
         border-radius: 4px;
         cursor: pointer;
         font-family: Pretendard;
         font-weight: bold;
         font-size: 10px;
+        margin-bottom: 35%;
     }
 }

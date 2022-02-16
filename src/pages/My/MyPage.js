@@ -10,8 +10,10 @@ function MyPage() {
   const [FollowerModalOn, setFollowerModalOn] = useState(false);
   const [FollowModalOn, setFollowModalOn] = useState(false);
 
-  let [Tap, setTap] = useState(0);
-
+ let [Tap, setTap] = useState(0);
+  const activeModal = () => {
+    setShowModal((open) => !open);
+  };
   function TabContent(props) {
     if (props.Tap === 0) {
       return <Post />;
