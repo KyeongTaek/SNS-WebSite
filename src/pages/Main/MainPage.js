@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import {Dropdown} from 'react-bootstrap'
-
+import {Link} from 'react-router-dom';
 
 function MainPage() {
   return (
@@ -39,9 +39,8 @@ function board(){
                     
             </Dropdown.Toggle>
             <Dropdown.Menu>
-                <Dropdown.Item href="/#!">상대방 프로필 보기</Dropdown.Item>
-                <Dropdown.Item href="#!">게시물 보지 않기</Dropdown.Item>
-                <Dropdown.Item href="#!">게시물 신고하기</Dropdown.Item>
+                <Dropdown.Item href="/my">상대방 프로필 보기</Dropdown.Item>
+                <Dropdown.Item href="/report">게시물 신고하기</Dropdown.Item>
             </Dropdown.Menu>
             </Dropdown>
          
@@ -189,38 +188,46 @@ function phone(){
           <h5>연락처</h5>
 
 
-        <div className='chatFrame'>
-          <div className='circleBox'>
-            <img src="img/advertisement1.jpg" alt="채팅 이미지"/>
-            
+          <Link to="/chat">
+          <div className='chatFrame'>
+            <div className='circleBox'>
+              
+              <img src="img/advertisement1.jpg" alt="채팅 이미지"/>
+              
+            </div>
+            <h5 className='chatText'>adsf</h5>
+            <p className='chatText2'>asds</p>
+            <i className="far fa-envelope fa-2x"></i>
+
           </div>
-          <h5 className='chatText'>adsf</h5>
-          <p className='chatText2'>asds</p>
-          <i className="far fa-envelope fa-2x"></i>
+        </Link>
+        <Link to="/chat">
+          <div className='chatFrame'>
+            <div className='circleBox'>
+              
+              <img src="img/advertisement1.jpg" alt="채팅 이미지"/>
+              
+            </div>
+            <h5 className='chatText'>adsf</h5>
+            <p className='chatText2'>asds</p>
+            <i className="far fa-envelope fa-2x"></i>
 
-        </div>
-        <div className='chatFrame'>
-          <div className='circleBox'>
-            
-            <img src="img/advertisement1.jpg" alt="채팅 이미지"/>
-            
           </div>
-          <h5 className='chatText'>adsf</h5>
-          <p className='chatText2'>asds</p>
-          <i className="far fa-envelope fa-2x"></i>
+        </Link>
+        
+        <Link to="/chat">
+          <div className='chatFrame'>
+            <div className='circleBox'>
+              
+              <img src="img/advertisement1.jpg" alt="채팅 이미지"/>
+              
+            </div>
+            <h5 className='chatText'>adsf</h5>
+            <p className='chatText2'>asds</p>
+            <i className="far fa-envelope fa-2x"></i>
 
-        </div>
-        <div className='chatFrame'>
-          <div className='circleBox'>
-            <img src="img/advertisement1.jpg" alt="채팅 이미지"/>
-            
           </div>
-          <h5 className='chatText'>adsf</h5>
-          <p className='chatText2'>asds</p>
-
-          <i className="far fa-envelope fa-2x"></i>
-
-        </div>
+        </Link>
 
 
           

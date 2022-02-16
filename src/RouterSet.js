@@ -63,7 +63,6 @@ function RouterSet() {
           <Route path="/boardWrite" element={<BoardWritePage />}/>
           <Route path="/chat" element={<ChatPage />}/>
           <Route path="/join" element={<JoinPage />}/>
-          <Route path="/login" element={<LoginPage />}/>
           <Route path="/management" element={<ManagementPage />}/>
           <Route path="/my" element={<MyPage />}/>
           <Route path="/myConfig" element={<MyConfigPage/>}/>
@@ -73,7 +72,8 @@ function RouterSet() {
           <Route path="/idSearch" element={<IdSearchPage />}/>
           <Route path="/pwSearch" element={<PwSearchPage />}/>
           <Route path="/Report" element={<ReportPage />}/>
-          <Route path="/" element={<MainPage />}/>
+          <Route path="/MainPage" element={<MainPage />}/>
+          <Route path="/" element={<LoginPage />}/>
         
         </Routes>
 
