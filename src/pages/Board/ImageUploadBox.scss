@@ -1,0 +1,129 @@
+@mixin centerFill($width, $direction: row) {
+  width: $width;
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+}
+
+.ImagePreview {
+  $size: 104px;
+
+  @keyframes ImagePreview_construct {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  position: relative;
+  width: $size;
+  height: $size;
+  overflow: hidden;
+  animation: ImagePreview_construct 0.5s;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .icon_container {
+    $size: 20px;
+
+    @include centerFill(100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: $size;
+    height: $size;
+    margin: 5px;
+    background-color: #c4c4c4;
+    border-radius: 50%;
+
+    i {
+      color: white;
+    }
+  }
+}
+
+.ImageUploadBox {
+  @include centerFill(100%, column);
+
+  > * {
+    width: 100%;
+    border-radius: 3px;
+  }
+
+  input {
+    display: none;
+  }
+
+  label {
+    @include centerFill(100%);
+    justify-content: space-between;
+    background-color: #dedede;
+    padding: 20px 50px;
+
+    &:hover {
+      background-color: #c8c8c8;
+    }
+
+    .text_box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h3 {
+        font-size: 30px;
+        margin-bottom: 20px;
+      }
+      span {
+        font-size: 20px;
+        color: #6d6d6d;
+      }
+    }
+
+    .icon_box {
+      i {
+        font-size: 32px;
+      }
+    }
+  }
+
+  .preview_wrapper {
+    margin-top: 20px;
+    padding: 10px;
+    border: 3px solid #c6b4ec;
+
+    .preview_container {
+      $height: 240px;
+      width: 100%;
+      overflow-y: auto;
+      height: $height;
+      max-height: $height;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 104px);
+      column-gap: 20px;
+      row-gap: 10px;
+
+      &::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: #7c7c7c;
+        border-radius: 10px;
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background: #a6a6a6;
+      }
+      &::-webkit-scrollbar-track {
+        background: #ededed;
+        border-radius: 10px;
+      }
+    }
+  }
+}

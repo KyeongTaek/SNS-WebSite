@@ -1,19 +1,25 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import '../style/Navigation.scss';
 import { Dropdown } from 'react-bootstrap';
 function Navigation() {
-             
+        const location = useLocation();
         //  {/* Frame 페이지를 이름에 따라 보여줄지 안보여줄지 설정 */}
         //   {/* { location.pathname !== "/login" && location.pathname !=="/join" ?
         //   <div> <Footer /> <Navigation /> </div>: <div></div> } */}
+        console.log(location.pathname);
+
 
     return (
       <div className="Navigation">
-        
-          <nav >
+        {location.pathname ==="/" || location.pathname === "/join" || location.pathname ==="/pwSearch" || location.pathname === "/idSearch"? 
+        <div>
+
+        </div>:
+        <div>
+            <nav >
             <div className='container'>
                 <div className="logo">
-                    <NavLink to="/">logo</NavLink>
+                    <NavLink to="/mainPage">logo</NavLink>
                 </div>
     
                 <div className="search">
@@ -61,7 +67,7 @@ function Navigation() {
                                     </Dropdown.Toggle>
                         <Dropdown.Menu>
                             <Dropdown.Item href="/my">내 프로필 보기</Dropdown.Item>
-                            <Dropdown.Item href="#!">설정 및 개인정보</Dropdown.Item>
+                            <Dropdown.Item href="/myconfig">설정 및 개인정보</Dropdown.Item>
                             <Dropdown.Item href="#!">로그아웃</Dropdown.Item>
                         </Dropdown.Menu>
                         </Dropdown>
@@ -72,6 +78,8 @@ function Navigation() {
               <br/>
               </div>
         </nav>
+        </div>}
+          
       </div>
     );
   }

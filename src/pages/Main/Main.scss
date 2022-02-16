@@ -3,7 +3,7 @@
         display: inline-block;
 
     }
-
+    
     .mainLeft{
         width: 15%;
     }
@@ -280,6 +280,7 @@
     }
 
     .chatFrame{
+        color: black;
         margin-top: 2%;
         position: relative;
         padding:15px 0;
@@ -291,7 +292,7 @@
     .chatText{
         position: absolute;
         left: 15%;
-        top: 5%;
+        top: 20%;
         font-size: 0.9em;
     }
 
