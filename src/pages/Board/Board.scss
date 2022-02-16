@@ -1,4 +1,4 @@
-.BoardPage{
+.BoardPage {
   .boardButton {
     position: absolute;
     height: 50px;
@@ -11,6 +11,7 @@
     border-radius: 10px;
   }
   .row {
+    margin-top: 30px;
     margin-bottom: 30px;
   }
   .row > .col-md-9 > h1 {
@@ -36,7 +37,8 @@
   }
   #container1 {
     border: 3px solid #c6b4ec;
-    height: 600px;
+    height: auto;
+    margin-bottom: 30px;
   }
   .boardInput {
     background-color: #f2f2f2;

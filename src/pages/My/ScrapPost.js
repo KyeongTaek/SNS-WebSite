@@ -1,6 +1,14 @@
+import { useState } from "react";
+import CModal from "./CModal";
 function ScrapPost() {
+  const [showModal, setShowModal] = useState(false);
+  const activeModal = () => {
+    setShowModal((open) => !open);
+    // document.body.style.overflow = "hidden";
+  };
   return (
     <div className="gallery">
+      <CModal showModal={showModal} setShowModal={setShowModal} />
       <div className="gallery-item" tabindex="0">
         <img
           src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=500&h=500&fit=crop"
@@ -8,7 +16,7 @@ function ScrapPost() {
           alt=""
         />
 
-        <div className="gallery-item-info">
+        <div className="gallery-item-info" onClick={activeModal}>
           <ul>
             <li className="gallery-item-likes">
               <span className="visually-hidden">Likes:</span>
@@ -29,7 +37,7 @@ function ScrapPost() {
           alt=""
         />
 
-        <div className="gallery-item-info">
+        <div className="gallery-item-info" onClick={activeModal}>
           <ul>
             <li className="gallery-item-likes">
               <span className="visually-hidden">Likes:</span>
@@ -55,7 +63,7 @@ function ScrapPost() {
           <i className="fas fa-clone" aria-hidden="true"></i>
         </div>
 
-        <div className="gallery-item-info">
+        <div className="gallery-item-info" onClick={activeModal}>
           <ul>
             <li className="gallery-item-likes">
               <span className="visually-hidden">Likes:</span>
@@ -81,7 +89,7 @@ function ScrapPost() {
           <i className="fas fa-video" aria-hidden="true"></i>
         </div>
 
-        <div className="gallery-item-info">
+        <div className="gallery-item-info" onClick={activeModal}>
           <ul>
             <li className="gallery-item-likes">
               <span className="visually-hidden">Likes:</span>
@@ -107,7 +115,7 @@ function ScrapPost() {
           <i className="fas fa-clone" aria-hidden="true"></i>
         </div>
 
-        <div className="gallery-item-info">
+        <div className="gallery-item-info" onClick={activeModal}>
           <ul>
             <li className="gallery-item-likes">
               <span className="visually-hidden">Likes:</span>
@@ -128,7 +136,7 @@ function ScrapPost() {
           alt=""
         />
 
-        <div className="gallery-item-info">
+        <div className="gallery-item-info" onClick={activeModal}>
           <ul>
             <li className="gallery-item-likes">
               <span className="visually-hidden">Likes:</span>
@@ -154,7 +162,7 @@ function ScrapPost() {
           <i className="fas fa-clone" aria-hidden="true"></i>
         </div>
 
-        <div className="gallery-item-info">
+        <div className="gallery-item-info" onClick={activeModal}>
           <ul>
             <li className="gallery-item-likes">
               <span className="visually-hidden">Likes:</span>
@@ -175,7 +183,7 @@ function ScrapPost() {
           alt=""
         />
 
-        <div className="gallery-item-info">
+        <div className="gallery-item-info" onClick={activeModal}>
           <ul>
             <li className="gallery-item-likes">
               <span className="visually-hidden">Likes:</span>
@@ -201,7 +209,7 @@ function ScrapPost() {
           <i className="fas fa-clone" aria-hidden="true"></i>
         </div>
 
-        <div className="gallery-item-info">
+        <div className="gallery-item-info" onClick={activeModal}>
           <ul>
             <li className="gallery-item-likes">
               <span className="visually-hidden">Likes:</span>
@@ -222,7 +230,7 @@ function ScrapPost() {
           alt=""
         />
 
-        <div className="gallery-item-info">
+        <div className="gallery-item-info" onClick={activeModal}>
           <ul>
             <li className="gallery-item-likes">
               <span className="visually-hidden">Likes:</span>
@@ -243,7 +251,7 @@ function ScrapPost() {
           alt=""
         />
 
-        <div className="gallery-item-info">
+        <div className="gallery-item-info" onClick={activeModal}>
           <ul>
             <li className="gallery-item-likes">
               <span className="visually-hidden">Likes:</span>
@@ -269,7 +277,7 @@ function ScrapPost() {
           <i className="fas fa-video" aria-hidden="true"></i>
         </div>
 
-        <div className="gallery-item-info">
+        <div className="gallery-item-info" onClick={activeModal}>
           <ul>
             <li className="gallery-item-likes">
               <span className="visually-hidden">Likes:</span>
