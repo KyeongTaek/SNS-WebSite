@@ -15,11 +15,11 @@ function IdSearchPage() {
                 </div>
                 <div className="items">
                   <div className="label">Full Name</div><br></br>
-                  <input type="text" placeholder="이름 또는 닉네임을 입력해주세요" required></input><br></br>
+                  <input type="text" placeholder="Enter Name. . ." required></input><br></br>
                 </div>
                 <div className="items">
-                  <div className="label">Email</div><br></br>
-                  <input type="text" placeholder="이메일을 입력해주세요" required></input><br></br>
+                  <div className="label">Birth</div><br></br>
+                  <input type="text" placeholder="ex) 1999.01.31" required></input><br></br>
                 </div>
                 <div className="items">
                   <input type="submit" value="다음 단계"></input>
