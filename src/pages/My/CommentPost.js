@@ -5,7 +5,7 @@ function CommentPost() {
   const [showModal, setShowModal] = useState(false);
   const activeModal = () => {
     setShowModal((open) => !open);
-    document.body.style.overflow = "hidden";
+    // document.body.style.overflow = "hidden";
   };
   return (
     <div className="gallery">

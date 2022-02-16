@@ -2,7 +2,6 @@ import "./MyPage.scss";
 import { useState } from "react";
 import FollowerModal from "./FollowerModal";
 import FollowModal from "./FollowModal";
-
 import Post from "./Post";
 import CommentPost from "./CommentPost";
 import ScrapPost from "./ScrapPost";
@@ -12,10 +11,6 @@ function MyPage() {
   const [FollowModalOn, setFollowModalOn] = useState(false);
 
   let [Tap, setTap] = useState(0);
-  const activeModal = () => {
-    setShowModal((open) => !open);
-    document.body.style.overflow = "hidden";
-  };
 
   function TabContent(props) {
     if (props.Tap === 0) {
@@ -37,12 +32,6 @@ function MyPage() {
         onHide={() => setFollowModalOn(false)}
       />
       <div className="container">
-        <div id="container">
-          <button className="modalBtn" onClick={activeModal}>
-            Modal Open
-          </button>
-          <CModal showModal={showModal} setShowModal={setShowModal} />
-        </div>
         <div className="profile">
           <div className="profile-image">
             <img src="https://pbs.twimg.com/media/EZHSXZ_UcAIIDtm.jpg" alt="" />

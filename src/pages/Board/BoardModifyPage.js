@@ -1,4 +1,5 @@
 import "./Board.scss";
+import ImageUploadBox from "./ImageUploadBox";
 import {
   Dropdown,
   InputGroup,
@@ -7,7 +8,6 @@ import {
   Form,
   FloatingLabel,
 } from "react-bootstrap";
-
 function BoardModifyPage() {
   return (
     <div className="BoardPage">
@@ -20,20 +20,7 @@ function BoardModifyPage() {
         </div>
       </div>
       <div className="container" id="container1">
-        <div className="row">
-          <div className="col-md-2">
-            <h1>image</h1>
-          </div>
-          <div className="col-md-2">
-            <h1>image</h1>
-          </div>
-          <div className="col-md-2">
-            <h1>image</h1>
-          </div>
-          <div className="col-md-2">
-            <h1>image</h1>
-          </div>
-        </div>
+        <ImageUploadBox />
         <FloatingLabel controlId="floatingTextarea2" label="입력창입니다.">
           <Form.Control
             as="textarea"
