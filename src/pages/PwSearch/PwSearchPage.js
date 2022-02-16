@@ -15,11 +15,11 @@ function PwSearchPage() {
             </div>
             <div className="items">
               <div className="label">ID</div>
-              <input type="text" placeholder="아이디를 입력해주세요" required></input><br></br>
+              <input type="text" placeholder="Enter ID. . ." required></input><br></br>
             </div>
             <div className="items">
-              <div className="label">Email</div>
-              <input type="text" placeholder="이메일을 입력해주세요" required></input><br></br>
+              <div className="label">Birth</div>
+              <input type="text" placeholder="ex) 1999.01.31" required></input><br></br>
             </div>
             <div className="items">
               <input type="submit" value="다음 단계"></input>
