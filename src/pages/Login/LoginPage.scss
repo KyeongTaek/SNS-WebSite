@@ -35,12 +35,12 @@
 //    }
 
 
-    h2.identification {
-        font-family: Pretendard_Regular;
-        font-weight: normal;
-        font-size: 12px;
-        color: #00000099;  
-    }
+ //   h2.identification {
+//        font-family: Pretendard_Regular;
+//        font-weight: normal;
+//        font-size: 12px;
+//        color: #00000099;  
+//    }
 
     input[type=submit] {
         width: 60%;
@@ -68,13 +68,13 @@
 
     input[type=password] {
         width: 100%;
-        height: 56px;
+        height: 61px;
         border: 1px solid #0000001F;
         border-radius: 4px;
         font-family: Pretendard_Regular;
         font-weight: normal;
         font-size: 16px;
-        margin-top: 2%;
+        //margin-top: 2%;
     }
 
 //    div.fixed {
@@ -85,14 +85,14 @@
         //margin-left: 50%;
         width: 60%;
         //margin-top: 15%;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
+        //display: flex;
+        //flex-direction: column;
+        //flex-wrap: wrap;
         
     }
 
     .loginFrame input{
-        padding-left: 3%;
+        padding-left: 1.5%;
     }
 
 
@@ -133,7 +133,10 @@
     }
 
     ul {
-        margin-left: 25%;
+        //margin-left: 25%;
+        align-items: center;
+        text-align: center;
+        padding-left: 0%;
     }
 
 
@@ -182,5 +185,23 @@
         flex-wrap: wrap;
         width: 80%;
     }
+
+    div.label {
+        font-family: 'Pretendard_Regular';
+        font-weight: normal;
+        font-size: 12px;
+        color: #00000099;
+        position: relative;
+        padding-left: 1%;
+        padding-right: 1%;
+        top: 1.5%;
+        left: 2.5%;
+        height: 2%;
+        display: inline-block;
+        border: none;
+        text-align: center;
+        background-color: white;
+    }
+
 
 }
