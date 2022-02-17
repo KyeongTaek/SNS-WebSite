@@ -13,10 +13,14 @@ function JoinPage() {
             <div className="label">Full Name</div>
             <input type="text" placeholder="Enter Name. . ." required></input><br></br>
              
-            <div className="label">Email</div>
-            <input type="text" placeholder="Enter Email. . ." required></input><br></br>
+            <div className="label">ID</div>
+            <input type="text" placeholder="Enter ID. . ." required></input><br></br>
             
-              
+            <div className="label">Birth</div>
+            <input type="text" placeholder="ex) 1999.01.31" required></input><br></br>
+
+            <div className="label">Address</div>
+            <input type="text" placeholder="ex) 충청북도 청주시 서원구 충대로 1" required></input><br></br>
             <div className="label">Password</div>
             <input type="password" placeholder="Enter password. . ." required></input><br></br>
             <div className="valid-feedback">Valid.</div>
