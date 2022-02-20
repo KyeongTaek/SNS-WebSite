@@ -1,21 +1,29 @@
 .ChatPage{
   display: flex;
   flex-wrap: wrap;
-  margin-top: 74.5px;
-  height: 780px;
+  align-items: center;
 
   .contactList{
     display: flex;
     flex-direction: column;
-    width: 18%;
+    width: 25%;
   }
 
   .contact{
     padding: 0px  15px 0px  30px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     height: 64px;
+    img{
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+    }
+    .info{
+      .small{
+        text-align: center;
+      }
+    }
   }
 
   .contact:hover{
@@ -45,6 +53,11 @@
     margin-bottom: 23px;
     padding: 20px 0px 0px 20px;
     height: 109px;
+    img{
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+    }
   }
 
   .chats label{
@@ -58,8 +71,23 @@
     height: 109px;
   }
 
-  .chatWindow input{
-    width: 100%;
-    height: 92px;
+  .chatWindow {
+    display: flex;
+    flex-direction: row;
+
+    input {    
+      width: 100%;
+      height: 92px;
+    }
+
+    Button{
+      width: 10%;
+    }
+
+  }
+
+  .ProfileImg img{
+    width: 40px;
+    height: 40px;
   }
 }
