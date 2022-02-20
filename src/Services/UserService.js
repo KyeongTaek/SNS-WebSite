@@ -20,7 +20,6 @@ export function call(api, method, request){
     if(request){
         options.body = JSON.stringify(request);
     }
-    console.log(request)
 
     return fetch(options.url, options)
     .then((response)=>
@@ -51,4 +50,9 @@ export function login(userDTO){
 
     });
 }
+
+export function signout() {
+    localStorage.setItem(ACCESS_TOKEN, null);
+    window.location.href = "/";
+  }
 
