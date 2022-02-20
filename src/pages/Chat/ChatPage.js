@@ -23,8 +23,6 @@ function ChatPage() {
     }
   }
 
-  //함수를 나오고 싶을 땐 return을 하셔도 되구 flag하나 두고 forEach에서 나인지 아닌 지 구별해서 맨 마지막에 push한번만하면 해결됩니다
-
   const getChatting = async () => {
     const response = await getData();
     if (flag === false) {
@@ -66,7 +64,6 @@ function ChatPage() {
       //응답 성공 
       if (post !== "") {
         const response = await axios.post('http://localhost:8080/chat/insert', {
-          //보내고자 하는 데이터 
           user_id: user_id,
           friend_id: friend_id,
           chat_content: post
@@ -77,7 +74,6 @@ function ChatPage() {
       }
 
     } catch (error) {
-      //응답 실패
       console.error(error);
     }
   }
@@ -135,9 +131,5 @@ function getChats() {
       : <div className="ProfileImg"><img src="img/advertisement2.jpg" alt="프로필사진" ></img><div className="chatByFriend"><label>{item.key}</label><div >{item.chat}</div></div></div>);
   
 }
-
-// function defaultPage() {
-//   return ();
-// }
 
 export default ChatPage;
