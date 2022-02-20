@@ -1,6 +1,11 @@
 import { Modal, Button, ListGroup } from "react-bootstrap";
 import "./FModal.scss";
+// import { useEffect } from "react";
+import { follower } from "../../Services/BoardService";
 const FollowerModal = ({ show, onHide }) => {
+  // useEffect(() => {
+
+  // })
   return (
     <Modal
       show={show}
@@ -13,7 +18,7 @@ const FollowerModal = ({ show, onHide }) => {
         <Modal.Title id="contained-modal-title-vcenter">팔로워</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-
+        <li>{follower}</li>
         <div className="modal_search">
           <div className="modal_searchFrame">
             <input
@@ -23,7 +28,6 @@ const FollowerModal = ({ show, onHide }) => {
               placeholder="search..."
             />
             <button className="modal_img-button">
-
               <i className="fas fa-search fa-sm"></i>
             </button>
           </div>
@@ -32,7 +36,6 @@ const FollowerModal = ({ show, onHide }) => {
           <ListGroup.Item as="li" className="d-flex bd-highlight mb-3">
             <div className="p-2 bd-highlight">
               <div className="modal_circleBox">
-
                 <img src="img/advertisement1.jpg" alt=""></img>
               </div>
             </div>
@@ -42,9 +45,7 @@ const FollowerModal = ({ show, onHide }) => {
           </ListGroup.Item>
           <ListGroup.Item as="li" className="d-flex bd-highlight mb-3">
             <div className="p-2 bd-highlight">
-
               <div className="modal_circleBox">
-
                 <img src="img/advertisement1.jpg" alt=""></img>
               </div>
             </div>
@@ -54,9 +55,7 @@ const FollowerModal = ({ show, onHide }) => {
           </ListGroup.Item>
           <ListGroup.Item as="li" className="d-flex bd-highlight mb-3">
             <div className="p-2 bd-highlight">
-
               <div className="modal_circleBox">
-
                 <img src="img/advertisement1.jpg" alt=""></img>
               </div>
             </div>
@@ -66,9 +65,7 @@ const FollowerModal = ({ show, onHide }) => {
           </ListGroup.Item>
           <ListGroup.Item as="li" className="d-flex bd-highlight mb-3">
             <div className="p-2 bd-highlight">
-
               <div className="modal_circleBox">
-
                 <img src="img/advertisement1.jpg" alt=""></img>
               </div>
             </div>
@@ -78,9 +75,7 @@ const FollowerModal = ({ show, onHide }) => {
           </ListGroup.Item>
           <ListGroup.Item as="li" className="d-flex bd-highlight mb-3">
             <div className="p-2 bd-highlight">
-
               <div className="modal_circleBox">
-
                 <img src="img/advertisement1.jpg" alt=""></img>
               </div>
             </div>
@@ -90,9 +85,7 @@ const FollowerModal = ({ show, onHide }) => {
           </ListGroup.Item>
           <ListGroup.Item as="li" className="d-flex bd-highlight mb-3">
             <div className="p-2 bd-highlight">
-
               <div className="modal_circleBox">
-
                 <img src="img/advertisement1.jpg" alt=""></img>
               </div>
             </div>
@@ -102,9 +95,7 @@ const FollowerModal = ({ show, onHide }) => {
           </ListGroup.Item>
           <ListGroup.Item as="li" className="d-flex bd-highlight mb-3">
             <div className="p-2 bd-highlight">
-
               <div className="modal_circleBox">
-
                 <img src="img/advertisement1.jpg" alt=""></img>
               </div>
             </div>
@@ -114,9 +105,7 @@ const FollowerModal = ({ show, onHide }) => {
           </ListGroup.Item>
           <ListGroup.Item as="li" className="d-flex bd-highlight mb-3">
             <div className="p-2 bd-highlight">
-
               <div className="modal_circleBox">
-
                 <img src="img/advertisement1.jpg" alt=""></img>
               </div>
             </div>

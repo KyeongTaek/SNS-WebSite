@@ -6,11 +6,16 @@ import Post from "./Post";
 import CommentPost from "./CommentPost";
 import ScrapPost from "./ScrapPost";
 import { Nav } from "react-bootstrap";
+import {
+  followerProposal,
+  go_follow_request,
+} from "../../Services/BoardService";
+
 function MyPage() {
   const [FollowerModalOn, setFollowerModalOn] = useState(false);
   const [FollowModalOn, setFollowModalOn] = useState(false);
 
- let [Tap, setTap] = useState(0);
+  let [Tap, setTap] = useState(0);
 
   function TabContent(props) {
     if (props.Tap === 0) {
@@ -40,13 +45,27 @@ function MyPage() {
           <div className="profile-user-settings">
             <h1 className="profile-user-name">Corona</h1>
 
-            <button className="btn profile-edit-btn">프로필 편집</button>
-
             <button
+              className="btn profile-edit-btn"
+              onClick={followerProposal({
+                user_id: "test...1",
+                password: "1111",
+              })}
+            >
+              프로필 편집
+            </button>
+
+            {/* <button
               className="btn profile-settings-btn"
               aria-label="profile settings"
             >
               <i className="fas fa-cog" aria-hidden="true"></i>
+            </button> */}
+            <button
+              className="btn profile-edit-btn"
+              onClick={go_follow_request}
+            >
+              Follow 신청
             </button>
           </div>
 
