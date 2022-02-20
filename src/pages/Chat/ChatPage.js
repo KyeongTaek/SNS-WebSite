@@ -1,63 +1,101 @@
+import { Button } from "react-bootstrap";
 import "./ChatPage.scss";
+// import SendChat from "./SendChat";
+import { useState } from "react";
 
-// 연락처 목록
-const contact = {
-  user: ["HJ", "WJ", "KT", "SW"],
-  date: new Date()
-};
+const axios = require('axios').default;
+const user_id = 'test...1';
+const friend_id = 'test...2';
+let result = [];
 
-const chats = 
-  {
-    id: 1,
-    name: 'HJ',
-    content: [{
-      talk: '완전 재밌어',
-      isMe: true,
-      date: '2022-02-02-17:06'
-    },
-    {
-      talk: '리액트 최고임',
-      isMe: true,
-      date: '2022-02-02-17:07'
-    },
-    {
-      talk: '행복해',
-      isMe: true,
-      date: '2022-02-02-17:18'
-      },
-      {
-        talk: '완전 인정',
-        isMe: false,
-        date: '2022-02-02-17:10'
-      },
-      {
-        talk: '짱 재밌더라',
-        isMe: false,
-        date: '2022-02-02-17:11'
-      },
-      {
-        talk: '뭘 좀 아네 ㅎ',
-        isMe: false,
-        date: '2022-02-02-17:20'
-      }
-    ],
-  };
-
+var flag = false;
+var flagPost = false;
 
 function ChatPage() {
+  let [State, setState] = useState(0);
+
+  const getData = async () => {
+    try {
+      return await axios.get('http://localhost:8080/chat/list/' + user_id + '/' + friend_id);
+    } catch (error) {
+      //응답 실패
+      console.error(error);
+    }
+  }
+
+  const getChatting = async () => {
+    const response = await getData();
+    if (flag === false) {
+      response.data.forEach(element => {
+        if (element.user_id === user_id) {
+          result.push({
+            key: 'ME',
+            chat: element.chat_content,
+          })
+        }
+        else {
+          result.push({
+            key: friend_id,
+            chat: element.chat_content,
+          })
+        }
+      }
+      );
+      flag = true;
+      return;
+    }
+    
+    if (flagPost === true) {
+      result.push({
+        key: 'ME',
+        chat: response?.data[result.length].chat_content,
+      })
+      flagPost = false;
+    }
+
+    console.log(result);
+    setState(1);
+  }
+
+  async function postData() {
+    try {
+      let post = document.getElementById('send').value;
+      flagPost = true;
+      //응답 성공 
+      if (post !== "") {
+        const response = await axios.post('http://localhost:8080/chat/insert', {
+          user_id: user_id,
+          friend_id: friend_id,
+          chat_content: post
+        });
+        console.log(response);
+        document.getElementById('send').value = '';
+        setState(0);
+      }
+
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  if (State === 0)
+    getChatting();
+  
+  
   return (
     <div className="ChatPage"> 
       <div className="contactList">
         <div className="contacts">
-          {getContacts()}
+          {/* {getContacts()} */}
         </div>
       </div>
       <div className="chatList">
         <div className="chats">
-          { getChats() }
+          {getChats()}
         </div>
         <div className="chatWindow">
-          <input type="text" placeholder="입력하세요"></input>
+          <input type="text" id="send" placeholder="입력하세요"></input>
+          <Button onClick={postData}>보내기</Button>
         </div>
       </div>
     </div>
@@ -67,19 +105,31 @@ function ChatPage() {
 
 
 
-// 연락처 불러오기
-function getContacts() {
-  return contact.user.map(user => <div className="contact">
-    <div>{user}</div><div>1일전</div>
-  </div>);
-}
+// // 연락처 불러오기
+// function getContacts() {
+//   return chats.map(each => 
+//     <div className="contact">
+//       <div><img src="img/advertisement2.jpg" alt="프로필사진"></img></div>
+//       <div className="info">
+//         <div className="userName">{each.name}</div>
+//         <div className="small">
+//           <span>최근 대화 내용이 들어가야함</span>
+//           <span>·</span>
+//           <time datetime="P2D">2일전</time>
+//         </div>
+//       </div>
+//       <div className="checkRead">
+        
+//       </div>
+//   </div>);
+// }
 
 function getChats() {
-  return chats.content.map((chat, index) => 
+  return result.map(item =>
+    item.key === 'ME' ?
+      <div className="chatByMe"><label>ME</label><div>{item.chat}</div></div>
+      : <div className="ProfileImg"><img src="img/advertisement2.jpg" alt="프로필사진" ></img><div className="chatByFriend"><label>{item.key}</label><div >{item.chat}</div></div></div>);
   
-  chat.isMe ? <div className="chatByMe"><label>ME</label><div>{chat.talk}</div></div>
-    : <div className="chatByFriend"><label>{chats.name}</label><div >{chat.talk}</div></div>)
 }
-
 
 export default ChatPage;
