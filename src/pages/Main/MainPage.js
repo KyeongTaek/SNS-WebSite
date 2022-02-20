@@ -7,15 +7,24 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import {Dropdown} from 'react-bootstrap'
 import {Link} from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { call } from '../../Services/UserService';
 
 function MainPage() {
+  const [chatUser, setChatUser] = useState([]);
+  useEffect(() => {
+        call("/chat/with", "GET", null).then((response) =>
+        setChatUser(response))
+  },[]);
+
+
   return (
     <div className="MainPage">
       {advertisement()}
       {mainSwiper()}
       {board()}
       {board()}
-      {phone()}
+      {phone(chatUser)}
       </div>
   );
 }
@@ -182,54 +191,28 @@ function mainSwiper(){
       </div>
   )
 }
-function phone(){
+function phone(chatUser){
   return(
         <div className="mainRight">
           <h5>연락처</h5>
 
 
-          <Link to="/chat">
-          <div className='chatFrame'>
+            {chatUser.map((element) =>
+          <Link key={element.friend_id} to="/chat">
+            <div className='chatFrame'>
             <div className='circleBox'>
               
               <img src="img/advertisement1.jpg" alt="채팅 이미지"/>
               
             </div>
-            <h5 className='chatText'>adsf</h5>
-            <p className='chatText2'>asds</p>
+            <h5 className='chatText'>{element.friend_id}</h5>
+            <p className='chatText2'>{element.chat_content}</p>
             <i className="far fa-envelope fa-2x"></i>
 
           </div>
         </Link>
-        <Link to="/chat">
-          <div className='chatFrame'>
-            <div className='circleBox'>
-              
-              <img src="img/advertisement1.jpg" alt="채팅 이미지"/>
-              
-            </div>
-            <h5 className='chatText'>adsf</h5>
-            <p className='chatText2'>asds</p>
-            <i className="far fa-envelope fa-2x"></i>
-
-          </div>
-        </Link>
+            )}
         
-        <Link to="/chat">
-          <div className='chatFrame'>
-            <div className='circleBox'>
-              
-              <img src="img/advertisement1.jpg" alt="채팅 이미지"/>
-              
-            </div>
-            <h5 className='chatText'>adsf</h5>
-            <p className='chatText2'>asds</p>
-            <i className="far fa-envelope fa-2x"></i>
-
-          </div>
-        </Link>
-
-
           
         </div>
   )

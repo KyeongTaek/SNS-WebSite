@@ -1,19 +1,37 @@
 import { NavLink, useLocation } from 'react-router-dom'
 import '../style/Navigation.scss';
 import { Dropdown } from 'react-bootstrap';
+import { useEffect, useState} from 'react';
+import { call, signout } from '../Services/UserService';
 function Navigation() {
         const location = useLocation();
         //  {/* Frame 페이지를 이름에 따라 보여줄지 안보여줄지 설정 */}
         //   {/* { location.pathname !== "/login" && location.pathname !=="/join" ?
         //   <div> <Footer /> <Navigation /> </div>: <div></div> } */}
         console.log(location.pathname);
+        const [name, setName] = useState("")
+        const [chatCount, setChatCount] = useState(0)
+        useEffect(() => {
+            async function fetchData(){
+                let count = 0;
+                call("/user/info", "GET", null).then((response) =>
+                {setName(response.user_name)})
 
+                await call("/chat/with", "GET", null).then((response) =>
+                response.forEach(element =>{
+                    
+                    count += element.chat_read;
+                }))
+                setChatCount(count)
+            }
+            fetchData();
+            
+          },[]);
 
     return (
       <div className="Navigation">
         {location.pathname ==="/" || location.pathname === "/join" || location.pathname ==="/pwSearch" || location.pathname === "/idSearch"? 
         <div>
-
         </div>:
         <div>
             <nav >
@@ -42,7 +60,7 @@ function Navigation() {
                         <NavLink className="iconFrame" to="/chat">
                             <i className="far fa-comment-dots fa-2x"></i>
                             <div>
-                                2
+                                {chatCount}
                             </div>
                         </NavLink>
                         <NavLink className="iconFrame" to="/boardWrite">
@@ -56,7 +74,7 @@ function Navigation() {
                             
                         </div>
                         <div className='userStatus'>
-                            <p> JungWonJae</p>
+                            <p> {name}</p>
                         </div>
                         
                         <div className='userDropFrame'>
@@ -68,7 +86,7 @@ function Navigation() {
                         <Dropdown.Menu>
                             <Dropdown.Item href="/my">내 프로필 보기</Dropdown.Item>
                             <Dropdown.Item href="/myconfig">설정 및 개인정보</Dropdown.Item>
-                            <Dropdown.Item href="#!">로그아웃</Dropdown.Item>
+                            <Dropdown.Item onClick={signout}>로그아웃</Dropdown.Item>
                         </Dropdown.Menu>
                         </Dropdown>
                         </div>
