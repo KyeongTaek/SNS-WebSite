@@ -6,10 +6,7 @@ import Post from "./Post";
 import CommentPost from "./CommentPost";
 import ScrapPost from "./ScrapPost";
 import { Nav } from "react-bootstrap";
-import {
-  followerProposal,
-  go_follow_request,
-} from "../../Services/BoardService";
+import { go_follow_request } from "../../Services/BoardService";
 
 function MyPage() {
   const [FollowerModalOn, setFollowerModalOn] = useState(false);
@@ -47,10 +44,10 @@ function MyPage() {
 
             <button
               className="btn profile-edit-btn"
-              onClick={followerProposal({
-                user_id: "test...1",
-                password: "1111",
-              })}
+              // onClick={followerProposal({
+              //   user_id: "test...1",
+              //   password: "1111",
+              // })}
             >
               프로필 편집
             </button>

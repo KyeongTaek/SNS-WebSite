@@ -5,8 +5,7 @@ export function call(api, method, request) {
   let headers = new Headers({
     "Content-Type": "application/json",
   });
-  const accessToken =
-    "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0Li4uMSIsImlzcyI6InpteiBhcHAiLCJpYXQiOjE2NDUzNTY1MzcsImV4cCI6MTY0NTQ0MjkzN30.FUqoc9bRq3FiffHh6FXv7G2Qpq1Z-KVqb3DqcefeYbSNfG1qJS0hFwdPZdiFj4DYDoS3E4h4-JAv3WOw0FPdUw";
+  const accessToken = localStorage.getItem("ACCESS_TOKEN");
   if (accessToken && accessToken !== null) {
     headers.append("Authorization", "Bearer " + accessToken);
   }
@@ -38,18 +37,12 @@ export function call(api, method, request) {
       return Promise.reject(error);
     });
 }
-export function follower() {
-  return call("/user/follower", "GET", null);
-}
 export function following() {
   return call("/user/following", "GET", null);
 }
-export function followerProposal(userDTO) {
-  return call("/user/followProposal", "POST", userDTO).then(
-    (window.location.href = "/myconfig")
-  );
-  // return call("/user/followProposal", "POST", userDTO);
-}
+// export function followerProposal(userDTO) {
+//   return call("/user/followProposal", "POST", userDTO);
+// }
 // export function followerProposal() {
 //   return call("/user/followProposal", "POST", null);
 // }
