@@ -12,21 +12,27 @@ function Navigation() {
         const [name, setName] = useState("")
         const [chatCount, setChatCount] = useState(0)
         useEffect(() => {
-            async function fetchData(){
-                let count = 0;
-                call("/user/info", "GET", null).then((response) =>
-                {setName(response.user_name)})
+            if(location.pathname ==="/" || location.pathname === "/join" || location.pathname ==="/pwSearch" || location.pathname === "/idSearch"){
 
-                await call("/chat/with", "GET", null).then((response) =>
-                response.forEach(element =>{
-                    
-                    count += element.chat_read;
-                }))
-                setChatCount(count)
             }
-            fetchData();
+            else{
+                async function fetchData(){
+                    let count = 0;
+                    call("/user/info", "GET", null).then((response) =>
+                    {setName(response.user_name)})
+    
+                    await call("/chat/with", "GET", null).then((response) =>
+                    response.forEach(element =>{
+                        
+                        count += element.chat_read;
+                    }))
+                    setChatCount(count)
+                }
+                fetchData();
+                
+            }
             
-          },[]);
+          },[location.pathname]);
 
     return (
       <div className="Navigation">
