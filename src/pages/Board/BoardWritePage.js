@@ -6,24 +6,34 @@ import {
   Form,
   FloatingLabel,
 } from "react-bootstrap";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { call } from "../../Services/BoardService";
 function BoardWritePage() {
-  const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
+  const [title, setTitle] = useState("test");
+  const [content, setContent] = useState("test");
   const [data, setData] = useState({});
 
-  const register = ()=>{
-    async function fetchData() {
-      await setData({"post_title" : title, "post_content" : content})
-      await call("/board/register", "POST", data).then((response)=>{
-        console.log(response);
-      })
-      Swal.fire('게시글 작성 완료').then(result =>{window.location.href="/my"})
-      
+  useEffect(() => {
+    if(Object.keys(data).length === 0){
+      console.log("null")
     }
-    fetchData();
+    else{
+      console.log("not null")
+      console.log(data)
+      call("/board/register", "POST", data).then((response)=>{
+        console.log(response);
+      Swal.fire('게시글 작성 완료').then(result =>{window.location.href="/my"})
+      })
+    }
+    
+  }, [data])
+  
+  
+  const register = ()=>{
+    setData({"post_title" : title, "post_content" : content});
   }
+
+
   return (
     <div className="BoardPage">
       <div className="row">
