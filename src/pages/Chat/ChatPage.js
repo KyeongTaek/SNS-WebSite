@@ -1,92 +1,180 @@
 import { Button } from "react-bootstrap";
 import "./ChatPage.scss";
 // import SendChat from "./SendChat";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+const ACCESS_TOKEN = "ACCESS_TOKEN";
 
 const axios = require('axios').default;
 const user_id = 'test...1';
-const friend_id = 'test...2';
+let friend_id = '';
+let friend_list = [];
 let result = [];
 
-var flag = false;
-var flagPost = false;
+const accessToken = localStorage.getItem("ACCESS_TOKEN");
+
+const getFriendData = async () => {
+  return await axios.get('http://localhost:8089/chat/with', {
+    headers: {
+      Authorization: `Bearer ${accessToken}`
+    }
+  });
+}
+
+const parsingFriend = async () => {
+  if (accessToken && accessToken !== null) {
+    try {
+      const response = await getFriendData();
+      if (friend_list.length <= 0)
+        response.data.forEach(id => {
+          friend_list.push({
+            id: id.friend_id,
+            content: id.chat_content
+          });
+        })
+      console.log(friend_list);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+}
+
+parsingFriend();
+
 
 function ChatPage() {
-  let [State, setState] = useState(0);
+  const [text, setText] = useState('');
+  const [flag, setFlag] = useState(false);
+  const [select, setSelect] = useState('');
+  let [State, setState] = useState(3);
+  
+
+  // useEffect(() => { }, [State]);
+
+
+  // state : 0 -> default
+  // state : 1 -> post 요청 보냄
+  // state : 2 -> 친구 변경
+  // state : 3 -> getChatting 필요
+
+
+  const postData = async () => {
+    console.log(select, text);
+    try {
+
+      if (text !== "") {
+        let data = JSON.stringify({
+          friend_id: select,
+          chat_content: text
+        })
+        console.log(data);
+        const response = await axios.post('http://localhost:8089/chat/insert', data, {
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${accessToken}`
+          }
+        });
+        console.log(response);
+        setState(1);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   const getData = async () => {
-    try {
-      return await axios.get('http://localhost:8080/chat/list/' + user_id + '/' + friend_id);
-    } catch (error) {
-      //응답 실패
-      console.error(error);
-    }
+    if (select !== "")
+      try {
+        return await axios.get('http://localhost:8089/chat/list/' + user_id + '/' + select, {
+          headers: {
+            Authorization: `Bearer ${accessToken}`
+          }
+        });
+      } catch (error) {
+        //응답 실패
+        console.error(error);
+      }
   }
 
   const getChatting = async () => {
     const response = await getData();
-    if (flag === false) {
-      response.data.forEach(element => {
-        if (element.user_id === user_id) {
-          result.push({
-            key: 'ME',
-            chat: element.chat_content,
-          })
+    if (select !== "")
+      if (select !== friend_id) {
+        result = [];
+        response.data.forEach(element => {
+          if (element.user_id === user_id) {
+            result.push({
+              key: 'ME',
+              chat: element.chat_content,
+            })
+          }
+          else {
+            result.push({
+              key: select,
+              chat: element.chat_content,
+            })
+          }
+          friend_id = select;
         }
-        else {
-          result.push({
-            key: friend_id,
-            chat: element.chat_content,
-          })
-        }
+        );
+        return;
       }
-      );
-      flag = true;
-      return;
-    }
-    
-    if (flagPost === true) {
+
+    if (State === 1) {
       result.push({
         key: 'ME',
         chat: response?.data[result.length].chat_content,
       })
-      flagPost = false;
     }
 
     console.log(result);
-    setState(1);
+    setState(0);
   }
 
-  async function postData() {
-    try {
-      let post = document.getElementById('send').value;
-      flagPost = true;
-      //응답 성공 
-      if (post !== "") {
-        const response = await axios.post('http://localhost:8080/chat/insert', {
-          user_id: user_id,
-          friend_id: friend_id,
-          chat_content: post
-        });
-        console.log(response);
-        document.getElementById('send').value = '';
-        setState(0);
-      }
+  // input 타이핑
+  const onChange = (e) => {
+    setText(e.target.value);
+  };
 
-    } catch (error) {
-      console.error(error);
-    }
+  // 값 전송 버튼
+  const onReset = () => {
+    setFlag(true);
   }
 
-  if (State === 0)
+  // 연락처 
+  const onClick = (e) => {
+    setSelect(e.target.id);
     getChatting();
-  
-  
+    console.log(e.target.id);
+  }
+
+
+  // 연락처 불러오기
+  function getContacts() {
+    return friend_list.map(each =>
+      <div className="contact" id={each.id} onClick={onClick}>
+        <div><img src="img/advertisement2.jpg" alt="프로필사진"></img></div>
+        <div className="info">
+          <div className="userName">{each.id}</div>
+          <div className="small">
+            <span>{each.content}</span>
+            <span>·</span>
+            <time datetime="P2D">2일전</time>
+          </div>
+        </div>
+      </div>);
+  }
+
+
+  useEffect(() => {
+    if (flag === true)
+      postData();
+  }, [flag]);
+
   return (
     <div className="ChatPage"> 
       <div className="contactList">
         <div className="contacts">
-          {/* {getContacts()} */}
+          {getContacts()}
         </div>
       </div>
       <div className="chatList">
@@ -94,42 +182,21 @@ function ChatPage() {
           {getChats()}
         </div>
         <div className="chatWindow">
-          <input type="text" id="send" placeholder="입력하세요"></input>
-          <Button onClick={postData}>보내기</Button>
+          <input type="text" onChange={onChange} value={text} placeholder="입력하세요"></input>
+          <Button onClick={onReset}>보내기</Button>
         </div>
       </div>
     </div>
   );
-
 }
 
 
-
-// // 연락처 불러오기
-// function getContacts() {
-//   return chats.map(each => 
-//     <div className="contact">
-//       <div><img src="img/advertisement2.jpg" alt="프로필사진"></img></div>
-//       <div className="info">
-//         <div className="userName">{each.name}</div>
-//         <div className="small">
-//           <span>최근 대화 내용이 들어가야함</span>
-//           <span>·</span>
-//           <time datetime="P2D">2일전</time>
-//         </div>
-//       </div>
-//       <div className="checkRead">
-        
-//       </div>
-//   </div>);
-// }
 
 function getChats() {
   return result.map(item =>
     item.key === 'ME' ?
       <div className="chatByMe"><label>ME</label><div>{item.chat}</div></div>
       : <div className="ProfileImg"><img src="img/advertisement2.jpg" alt="프로필사진" ></img><div className="chatByFriend"><label>{item.key}</label><div >{item.chat}</div></div></div>);
-  
 }
 
 export default ChatPage;
