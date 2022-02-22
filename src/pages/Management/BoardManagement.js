@@ -5,13 +5,13 @@ function BoardManagement(){
   const [report_content, setReport_content] = useState("예시내용");
   const [post_id, setPost_id] = useState(0);
   const [regulated, setRegulated] = useState();
-  const [datas, setDatas] = useState({})
-
+  const [datas, setDatas] = useState({});
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     async function fetchData() {
       call("/report/list", "GET", null).then((response) =>
       {setDatas(response)
-        
+        setLoading(false);
       })
       
       // await call("/report/reportList", "POST", null).then((response) =>
@@ -73,6 +73,28 @@ function BoardManagement(){
                 {/* {  datas.map((data) => 
                     <div>{console.log(data)}</div>
                 )} */}
+                {loading===false
+                ?datas.map((data) =>
+                <tr>
+                    
+                <td>
+                  {data.user_id}
+                </td>
+                <td>{data.regDate}</td>
+                <td>{data.report_content}</td>
+                <td>{data.post_id}</td>
+                <td>
+                  <select id="small" name="small">
+                    <option value="volvo">하루</option>
+                    <option value="saab">일주일</option>
+                    <option value="fiat">한달</option>
+                    <option value="audi">일년</option>
+                  </select>
+                </td>
+                
+              </tr>
+)
+                :null}
                   <tr>
                     
                     <td>
