@@ -1,5 +1,4 @@
 import { API_BASE_URL } from "../Services/app-config";
-// const ACCESS_TOKEN = "ACCESS_TOKEN";
 
 export function call(api, method, request) {
   let headers = new Headers({
@@ -45,5 +44,7 @@ export function call(api, method, request) {
 // }
 export function go_follow_request() {
   window.location.href = "/notification";
-
 }
+// export function go_post_request() {
+//   window.location.href = "/my";
+// }
