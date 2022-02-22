@@ -15,7 +15,11 @@ const FollowerModal = ({ show, onHide }) => {
     return (
       <ListGroup as="ol" numbered>
         {follower.map((element) => (
-          <ListGroup.Item as="li" className="d-flex bd-highlight mb-3">
+          <ListGroup.Item
+            as="li"
+            className="d-flex bd-highlight mb-3"
+            key={element.user_id}
+          >
             <div className="p-2 bd-highlight">
               <div className="modal_circleBox">
                 <img src="img/advertisement1.jpg" alt=""></img>

@@ -4,28 +4,38 @@ import { call } from "../../Services/BoardService";
 function Post() {
   const [showModal, setShowModal] = useState(false);
   const [post, setPost] = useState([]);
-  const activeModal = () => {
+  const [postId, setPostId] = useState();
+  const [loading,setLoading] = useState(true);
+  const activeModal = (e) => {
     setShowModal((open) => !open);
+    setPostId(e);
+
     // document.body.style.overflow = "hidden";
   };
   useEffect(() => {
     call("/board/list", "GET", null).then((response) => {
       console.log(response);
       setPost(response);
+      setLoading(false);
     });
   }, []);
   function postList(post) {
     return (
       <div className="gallery">
-        {post.map((element) => (
-          <div className="gallery-item" tabindex="0">
+        {loading===false?post.map((element) => (
+          <div className="gallery-item" tabIndex="0" key={element.post_id}>
             <img
               src="https://images.unsplash.com/photo-1497445462247-4330a224fdb1?w=500&h=500&fit=crop"
               className="gallery-image"
               alt=""
             />
 
-            <div className="gallery-item-info" onClick={activeModal}>
+            <div
+              className="gallery-item-info"
+              // onClick={activeModal(element.post_id)}
+              onClick={()=>{activeModal(element.post_id)}
+            }
+            >
               <ul>
                 <li className="gallery-item-likes">
                   <span className="visually-hidden">Likes:</span>
@@ -39,13 +49,17 @@ function Post() {
               </ul>
             </div>
           </div>
-        ))}
+        )):null}
       </div>
     );
   }
   return (
     <div>
-      <CModal showModal={showModal} setShowModal={setShowModal} />
+      <CModal
+        showModal={showModal}
+        setShowModal={setShowModal}
+        post_id={postId}
+      />
       {postList(post)}
     </div>
   );
