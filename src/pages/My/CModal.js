@@ -1,7 +1,7 @@
 import { useRef, useCallback, useEffect, useState } from "react";
 import "./CModal.scss";
-import { call } from "../../Services/UserService";
-function CModal({ showModal, setShowModal }) {
+import { call } from "../../Services/BoardService";
+function CModal({ showModal, setShowModal, post_id }) {
   const modalRef = useRef();
   const [postContent, setPostConetent] = useState("");
   const [postTitle, setPostTitle] = useState("");
@@ -30,14 +30,16 @@ function CModal({ showModal, setShowModal }) {
   }, [closeKey]);
   useEffect(() => {
     function fetchData() {
-      call("/board/read", "GET", null).then((response) => {
+      console.log(post_id);
+      call("/board/read", "POST", ({"post_id":post_id})).then((response) => {
+        console.log(response);
         setPostTitle(response.post_title);
         setPostConetent(response.post_content);
         setUserId(response.user_id);
       });
     }
     fetchData();
-  }, []);
+  });
   if (!showModal) return null;
   return (
     <div id="modal_box" ref={modalRef} onClick={closeModal}>
@@ -72,7 +74,7 @@ function CModal({ showModal, setShowModal }) {
               <p>{userId}</p>
             </div>
             <div className="customMargin"></div>
-            <p>input content~~~~~~~~~~~~~~~~~~</p>
+            <p>{postContent}</p>
           </div>
           <div className="customLine"></div>
           <div className="contents">

@@ -43,7 +43,7 @@ function Navigation() {
             <nav >
             <div className='container'>
                 <div className="logo">
-                    <NavLink to="/mainPage">logo</NavLink>
+                    <NavLink to="/mainPage">  <img src="img/favicon.png" alt="logo"></img></NavLink>
                 </div>
     
                 <div className="search">
