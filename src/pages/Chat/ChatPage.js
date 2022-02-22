@@ -1,14 +1,12 @@
 import { Button } from "react-bootstrap";
 import "./ChatPage.scss";
 // import SendChat from "./SendChat";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 const ACCESS_TOKEN = "ACCESS_TOKEN";
 
 const axios = require('axios').default;
 const user_id = 'test...1';
-let friend_id = '';
-let friend_list = [];
-let result = [];
+// let chatList = [];
 
 const accessToken = localStorage.getItem("ACCESS_TOKEN");
 
@@ -20,35 +18,59 @@ const getFriendData = async () => {
   });
 }
 
-const parsingFriend = async () => {
-  if (accessToken && accessToken !== null) {
-    try {
-      const response = await getFriendData();
-      if (friend_list.length <= 0)
-        response.data.forEach(id => {
-          friend_list.push({
-            id: id.friend_id,
-            content: id.chat_content
-          });
-        })
-      console.log(friend_list);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-}
 
-parsingFriend();
 
 
 function ChatPage() {
   const [text, setText] = useState('');
-  const [flag, setFlag] = useState(false);
   const [select, setSelect] = useState('');
-  let [State, setState] = useState(3);
-  
+  const [request, setRequest] = useState(0);
+  const [result, setResult] = useState([]);
+  const [change, setChange] = useState(false);
+  const [contact, setContact] = useState([]);
 
-  // useEffect(() => { }, [State]);
+  // input 타이핑
+  const onChange = (e) => {
+    setText(e.target.value);
+  };
+
+  // 값 전송 버튼
+  const onReset = () => {
+    if (text !== '') {
+      postData();
+      setText('');
+      setChange(true);
+    }
+  }
+
+  // 연락처 
+  const onClick = (e) => {
+    setRequest(2);
+    setChange(true);
+    setSelect(e.target.id);
+    console.log(e.target.id);
+  }
+
+
+  // const clickMaster = useCallback(() => {
+
+  // })
+
+  useEffect(() => {
+    console.log("jasdjfioasjdfio");
+    if (request === 3)
+      getChatting();
+    if (request === 2) {
+      getChatting();
+    }
+    if (request === 1)
+      getChatting();
+    setChange(false);
+  }, [request, change]);
+
+  useEffect(() => {
+    parsingFriend();
+}, []);
 
 
   // state : 0 -> default
@@ -57,32 +79,39 @@ function ChatPage() {
   // state : 3 -> getChatting 필요
 
 
-  const postData = async () => {
-    console.log(select, text);
-    try {
-
-      if (text !== "") {
-        let data = JSON.stringify({
-          friend_id: select,
-          chat_content: text
-        })
-        console.log(data);
-        const response = await axios.post('http://localhost:8089/chat/insert', data, {
-          headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${accessToken}`
-          }
-        });
-        console.log(response);
-        setState(1);
+  const parsingFriend = async () => {
+    if (accessToken && accessToken !== null) {
+      try {
+        const response = await getFriendData();
+        setContact(response.data);
+      } catch (error) {
+        console.log(error);
       }
-    } catch (error) {
-      console.log(error);
     }
   }
 
+  console.log(contact);
+
+  const postData = async () => {
+    console.log(select, text);
+    try {
+      const response = await axios.post('http://localhost:8089/chat/insert', {
+        friend_id: select,
+        chat_content: text
+      }, {
+        headers: {
+          Authorization: `Bearer ${accessToken}`
+        }
+      });
+      setRequest(1);
+    }
+    catch (error) {
+      console.log(error);
+    }
+  }
+  
+
   const getData = async () => {
-    if (select !== "")
       try {
         return await axios.get('http://localhost:8089/chat/list/' + user_id + '/' + select, {
           headers: {
@@ -95,68 +124,34 @@ function ChatPage() {
       }
   }
 
+
+  // 친구 고르면 -> 새로 세팅해서 넣어줘야함
+  // 아니면 -> 그냥 맨 마지막 하나만 넣어줘야함
   const getChatting = async () => {
     const response = await getData();
-    if (select !== "")
-      if (select !== friend_id) {
-        result = [];
-        response.data.forEach(element => {
-          if (element.user_id === user_id) {
-            result.push({
-              key: 'ME',
-              chat: element.chat_content,
-            })
-          }
-          else {
-            result.push({
-              key: select,
-              chat: element.chat_content,
-            })
-          }
-          friend_id = select;
-        }
-        );
-        return;
-      }
-
-    if (State === 1) {
-      result.push({
-        key: 'ME',
-        chat: response?.data[result.length].chat_content,
-      })
+    if (request === 2 || request === 1) {
+      setResult(response.data);
     }
+    
+    // if (request === 1) {
+    //   result.push({
+    //     key: 'ME',
+    //     chat: response?.data[result.length].chat_content,
+    //   })
+    // }
 
-    console.log(result);
-    setState(0);
   }
-
-  // input 타이핑
-  const onChange = (e) => {
-    setText(e.target.value);
-  };
-
-  // 값 전송 버튼
-  const onReset = () => {
-    setFlag(true);
-  }
-
-  // 연락처 
-  const onClick = (e) => {
-    setSelect(e.target.id);
-    getChatting();
-    console.log(e.target.id);
-  }
-
+  console.log(result);
 
   // 연락처 불러오기
   function getContacts() {
-    return friend_list.map(each =>
-      <div className="contact" id={each.id} onClick={onClick}>
+    return contact.map(each =>
+      <div className="contact" id={each.friend_id} onClick={onClick}>
         <div><img src="img/advertisement2.jpg" alt="프로필사진"></img></div>
         <div className="info">
-          <div className="userName">{each.id}</div>
+          <div className="userName">{each.friend_id}</div>
           <div className="small">
-            <span>{each.content}</span>
+            <span>{each.chat_content}</span>
             <span>·</span>
             <time datetime="P2D">2일전</time>
           </div>
@@ -164,12 +159,12 @@ function ChatPage() {
       </div>);
   }
 
-
-  useEffect(() => {
-    if (flag === true)
-      postData();
-  }, [flag]);
-
+  function getChats() {
+    return result.map(item =>
+      item.user_id === user_id ?
+        <div className="chatByMe"><label>ME</label><div>{item.chat_content}</div></div>
+        : <div className="ProfileImg"><img src="img/advertisement2.jpg" alt="프로필사진" ></img><div className="chatByFriend"><label>{item.user_id}</label><div >{item.chat_content}</div></div></div>);
+  }
   return (
     <div className="ChatPage"> 
       <div className="contactList">
@@ -192,11 +187,6 @@ function ChatPage() {
 
 
 
-function getChats() {
-  return result.map(item =>
-    item.key === 'ME' ?
-      <div className="chatByMe"><label>ME</label><div>{item.chat}</div></div>
-      : <div className="ProfileImg"><img src="img/advertisement2.jpg" alt="프로필사진" ></img><div className="chatByFriend"><label>{item.key}</label><div >{item.chat}</div></div></div>);
-}
+
 
 export default ChatPage;
