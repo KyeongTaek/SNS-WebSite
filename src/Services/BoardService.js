@@ -37,9 +37,6 @@ export function call(api, method, request) {
       return Promise.reject(error);
     });
 }
-export function following() {
-  return call("/user/following", "GET", null);
-}
 // export function followerProposal(userDTO) {
 //   return call("/user/followProposal", "POST", userDTO);
 // }
