@@ -45,4 +45,5 @@ export function call(api, method, request) {
 // }
 export function go_follow_request() {
   window.location.href = "/notification";
+
 }

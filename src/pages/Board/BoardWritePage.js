@@ -1,14 +1,39 @@
 import "./Board.scss";
 import ImageUploadBox from "./ImageUploadBox";
+import Swal from 'sweetalert2'
 import {
-  Dropdown,
   InputGroup,
-  FormControl,
-  DropdownButton,
   Form,
   FloatingLabel,
 } from "react-bootstrap";
+import { useEffect, useState } from "react";
+import { call } from "../../Services/BoardService";
 function BoardWritePage() {
+  const [title, setTitle] = useState("test");
+  const [content, setContent] = useState("test");
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    if(Object.keys(data).length === 0){
+      console.log("null")
+    }
+    else{
+      console.log("not null")
+      console.log(data)
+      call("/board/register", "POST", data).then((response)=>{
+        console.log(response);
+      Swal.fire('게시글 작성 완료').then(result =>{window.location.href="/my"})
+      })
+    }
+    
+  }, [data])
+  
+  
+  const register = ()=>{
+    setData({"post_title" : title, "post_content" : content});
+  }
+
+
   return (
     <div className="BoardPage">
       <div className="row">
@@ -21,8 +46,16 @@ function BoardWritePage() {
       </div>
       <div className="container" id="container1">
         <ImageUploadBox />
+        <FloatingLabel controlId="floatingTextarea1" label="제목 입력창입니다.">
+          <Form.Control
+            onChange={(e)=>{setContent(e.target.value)}}
+            placeholder="Leave a comment here"
+            style={{ height: "50px" }}
+          />
+        </FloatingLabel>
         <FloatingLabel controlId="floatingTextarea2" label="입력창입니다.">
           <Form.Control
+            onChange={(e)=>{setTitle(e.target.value)}}
             as="textarea"
             placeholder="Leave a comment here"
             style={{ height: "200px" }}
@@ -30,20 +63,9 @@ function BoardWritePage() {
         </FloatingLabel>
 
         <InputGroup className="mb-3" size="lg">
-          <FormControl aria-label="large" placeholder="태그를 입력하세요." />
-
-          <DropdownButton
-            variant="none"
-            title="테마선택"
-            id="input-group-dropdown-2"
-            align="end"
-          >
-            <Dropdown.Item href="#">테마1</Dropdown.Item>
-            <Dropdown.Item href="#">테마2</Dropdown.Item>
-            <Dropdown.Item href="#">테마3</Dropdown.Item>
-            <Dropdown.Divider />
-            <Dropdown.Item href="#">테마 적용 X</Dropdown.Item>
-          </DropdownButton>
+          <button type="submit" className="boardBtn" onClick={() =>{register()}}>
+            게시글 등록
+          </button>
         </InputGroup>
       </div>
     </div>

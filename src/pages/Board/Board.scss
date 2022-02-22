@@ -51,7 +51,34 @@
     font-size: x-large;
     border-radius: 10px;
   }
+  #floatingTextarea1{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
   #floatingTextarea2 {
     margin-bottom: 30px;
+  }
+  .preview_wrapper{
+    height: 130px;
+  }
+  .drag_or_click{
+    margin-top: 2%;
+  }
+  .boardBtn{
+    background-color: #c6b4ec;
+    border: 3px solid #c6b4ec;
+    color: white;
+    border-radius: 10px;
+    height: 45px;
+    width: 10%;
+    font-size: 1.2em;
+  }
+  .boardBtn:hover{
+    color: black;
+    border: 3px solid #c6b4ec;
+  }
+  .input-group{
+    flex-direction: row-reverse;
   }
 }
