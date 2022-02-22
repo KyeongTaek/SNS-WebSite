@@ -1,7 +1,11 @@
-import { useRef, useCallback, useEffect } from "react";
+import { useRef, useCallback, useEffect, useState } from "react";
 import "./CModal.scss";
+import { call } from "../../Services/UserService";
 function CModal({ showModal, setShowModal }) {
   const modalRef = useRef();
+  const [postContent, setPostConetent] = useState("");
+  const [postTitle, setPostTitle] = useState("");
+  const [userId, setUserId] = useState("");
 
   const closeModal = (e) => {
     if (modalRef.current === e.target) {
@@ -24,6 +28,16 @@ function CModal({ showModal, setShowModal }) {
     document.addEventListener("keydown", closeKey);
     return () => document.removeEventListener("keydown", closeKey);
   }, [closeKey]);
+  useEffect(() => {
+    function fetchData() {
+      call("/board/read", "GET", null).then((response) => {
+        setPostTitle(response.post_title);
+        setPostConetent(response.post_content);
+        setUserId(response.user_id);
+      });
+    }
+    fetchData();
+  }, []);
   if (!showModal) return null;
   return (
     <div id="modal_box" ref={modalRef} onClick={closeModal}>
@@ -45,7 +59,7 @@ function CModal({ showModal, setShowModal }) {
             <div className="circleBox">
               <img src="img/advertisement1.jpg" alt=""></img>
             </div>
-            <p>사용자이름</p>
+            <p>{postTitle}</p>
             <i className="fas fa-list fa-lg"></i>
           </div>
           <div className="customLine"></div>
@@ -55,7 +69,7 @@ function CModal({ showModal, setShowModal }) {
               <div className="circleBox">
                 <img src="img/advertisement1.jpg" alt=""></img>
               </div>
-              <p>작성자 프로필</p>
+              <p>{userId}</p>
             </div>
             <div className="customMargin"></div>
             <p>input content~~~~~~~~~~~~~~~~~~</p>
@@ -70,7 +84,7 @@ function CModal({ showModal, setShowModal }) {
             <p>
               admin 외 <b>15명</b>이 좋아합니다.
             </p>
-            <p>추운 겨울 붕어빵이랑 오댕</p>
+            <p>{postContent}</p>
             <p>댓글 4개 보기</p>
             <p className="date">12월 24일</p>
           </div>
