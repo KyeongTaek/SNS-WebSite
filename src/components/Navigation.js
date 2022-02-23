@@ -60,7 +60,7 @@ function Navigation() {
                         <NavLink className="iconFrame" to="/notification"> 
                             <i className="far fa-bell fa-2x"></i>
                             <div>
-                                1
+                                3
                             </div>
                         </NavLink>
                         <NavLink className="iconFrame" to="/chat">
