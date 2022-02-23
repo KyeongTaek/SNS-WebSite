@@ -37,8 +37,68 @@ function MainPage() {
 
 function board(post) {
   return (
-    <div className="boardFrame">
+    <div>
+      <div className="boardFrame">
+        <div className="board">
+          <div className="title">
+            테스트 게시글
+            <div className="titleLeft">
+              <div className="circleBox">
+                <img src="img/advertisement1.jpg" alt="board"></img>
+              </div>
+            </div>
+            <Dropdown className="userDropBtn" autoClose={true}>
+              <Dropdown.Toggle id="dropdown-autoclose-false">
+                <i className="fas fa-list fa-lg"></i>
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item href="/my">상대방 프로필 보기</Dropdown.Item>
+                <Dropdown.Item href="/report">게시물 신고하기</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </div>
+
+          <div className="picture2">
+            <Swiper
+              pagination={true}
+              modules={[Pagination]}
+              className="mySwiper2"
+            >
+              <SwiperSlide>
+                {" "}
+                <img src="img/board1.jpg" alt="board"></img>
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="img/board1.jpg" alt="board"></img>
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="img/board1.jpg" alt="board"></img>
+              </SwiperSlide>
+            </Swiper>
+          </div>
+
+          <div className="contents">
+            <i className="far fa-heart fa-2x"></i>
+            <i className="far fa-comment fa-2x"></i>
+            <i className="fab fa-telegram-plane fa-2x"></i>
+
+            <i className="far fa-bookmark fa-2x book"></i>
+            <p>
+              admin 외 <b>15명</b>이 좋아합니다.
+            </p>
+            <p>겨울</p>
+            <p>댓글 4개 보기</p>
+            <p className="date">2022-1-15</p>
+          </div>
+        </div>
+      <div className="comments">
+        <i className="far fa-comment-dots fa-2x"></i>
+        <input type="text" placeholder="댓글 달기"></input>
+      </div>
+    </div>
       {post.map((element) => (
+
+    <div className="boardFrame">
         <div className="board">
           <div className="title">
             {element.post_title}
@@ -91,11 +151,15 @@ function board(post) {
             <p className="date">{element.post_time}</p>
           </div>
         </div>
-      ))}
       <div className="comments">
         <i className="far fa-comment-dots fa-2x"></i>
         <input type="text" placeholder="댓글 달기"></input>
       </div>
+    </div>
+    ))}
+
+
+
     </div>
   );
 }

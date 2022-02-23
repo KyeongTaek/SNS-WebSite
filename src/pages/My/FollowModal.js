@@ -24,7 +24,7 @@ const FollowModal = ({ show, onHide }) => {
                 <img src="img/advertisement1.jpg" alt=""></img>
               </div>
             </div>
-            <div className="me-auto">{element.user_id}</div>
+            <div className="me-auto">{element.friend_id}</div>
 
             <Button>삭제</Button>
           </ListGroup.Item>

@@ -102,9 +102,11 @@ function getNotification(datas, fetchData, reload, setReload) {
           ?<div className="friendtext">
               <h5>친구 신청을 거절하셨습니다.</h5>
           </div>
-          :<div className="friendtext">
+          :data.friend_status === 1?
+          <div className="friendtext">
               <h5>친구 신청을 수락하셨습니다.</h5>
           </div>
+          :null
           }
             <div className="isFriendBtn">
                 <button type="submit" onClick={()=>{

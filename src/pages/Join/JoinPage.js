@@ -13,10 +13,9 @@ function JoinPage() {
 
   const saveAlert = () => {
     Swal.fire({
-      icon: 'success',
+      icon: 'warning',
       title: '첫번째 비밀번호와 두번째 비밀번호가 일치하지 않습니다.',
       showConfirmButton: true,
-      timer: 1500
     })
   }
   useEffect(() => {

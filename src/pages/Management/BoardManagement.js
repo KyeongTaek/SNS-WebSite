@@ -1,9 +1,9 @@
 import { useEffect, useState} from 'react';
 import { call } from '../../Services/EtcService';
 function BoardManagement(){
-  const [user_id, setUser_id] = useState("예시아이디");
-  const [report_content, setReport_content] = useState("예시내용");
-  const [post_id, setPost_id] = useState(0);
+  const [user_id, setUser_id] = useState("");
+  const [report_content, setReport_content] = useState("");
+  const [post_id, setPost_id] = useState();
   const [regulated, setRegulated] = useState();
   const [datas, setDatas] = useState({});
   const [loading, setLoading] = useState(true);
@@ -95,7 +95,7 @@ function BoardManagement(){
               </tr>
 )
                 :null}
-                  <tr>
+                  {/* <tr>
                     
                     <td>
                       {user_id}
@@ -112,22 +112,8 @@ function BoardManagement(){
                       </select>
                     </td>
                     
-                  </tr>
-                  <tr>
-                    <td>10</td>
-                    <td>10</td>
-                    <td>10</td>
-                    <td>10</td>
-                    <td>
-                      <select id="small" name="small">
-                        <option value="volvo">하루</option>
-                        <option value="saab">일주일</option>
-                        <option value="fiat">한달</option>
-                        <option value="audi">일년</option>
-                      </select>
-                    </td>
-                    
-                  </tr>
+                  </tr> */}
+                  
                 </tbody>
                 
               </table>

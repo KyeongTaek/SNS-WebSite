@@ -48,14 +48,14 @@ function BoardWritePage() {
         <ImageUploadBox />
         <FloatingLabel controlId="floatingTextarea1" label="제목 입력창입니다.">
           <Form.Control
-            onChange={(e)=>{setContent(e.target.value)}}
+            onChange={(e)=>{setTitle(e.target.value)}}
             placeholder="Leave a comment here"
             style={{ height: "50px" }}
           />
         </FloatingLabel>
         <FloatingLabel controlId="floatingTextarea2" label="입력창입니다.">
           <Form.Control
-            onChange={(e)=>{setTitle(e.target.value)}}
+            onChange={(e)=>{setContent(e.target.value)}}
             as="textarea"
             placeholder="Leave a comment here"
             style={{ height: "200px" }}
